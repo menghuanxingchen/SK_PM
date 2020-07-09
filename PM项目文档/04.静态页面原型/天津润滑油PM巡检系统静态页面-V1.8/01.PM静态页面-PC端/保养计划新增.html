@@ -1,0 +1,178 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PM巡检系统管理</title>
+<meta name="Copyright" content="Douco Design." />
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+</head>
+<body>
+<div id="dcWrap"> <div id="dcHead">
+ <div id="head">
+  <div class="logo"></div>
+  <div class="nav">
+   <ul class="navRight">
+    <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+     <div class="drop mUser">
+      <a href="#">修改密码</a>
+         <a href="#">个人信息修改</a>
+     </div>
+    </li>
+    <li class="noRight"><a href="#">退出</a></li>
+   </ul>
+  </div>
+ </div>
+</div>
+<!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
+        <ul class="top">
+            <li><a href="主页.html"><i class="home"></i><em>管理首页</em></a></li>
+        </ul>
+        <ul>
+            <li><a href="用户列表.html"><i class="page"></i><em>用户信息管理</em></a></li>
+            <li><a href="设备类型.html"><i class="page"></i><em>设备类型管理</em></a></li>
+            <li><a href="设备列表.html"><i class="page"></i><em>设备管理</em></a></li>
+            <li><a href="检查项目列表.html"><i class="page"></i><em>检查项目管理</em></a></li>
+        </ul>
+        <ul>
+            <li class="cur"><a href="保养计划列表.html"><i class="productCat"></i><em>保养计划管理</em></a></li>
+            <li><a href="保养计划历史列表.html"><i class="productCat"></i><em>保养计划历史列表</em></a></li>
+            <li><a href="项目管理列表.html"><i class="productCat"></i><em>项目管理列表</em></a></li>
+            <li><a href="项目管理历史列表.html"><i class="productCat"></i><em>项目管理历史列表</em></a></li>
+            <li><a href="巡检计划列表.html"><i class="productCat"></i><em>巡检计划管理</em></a></li>
+            <li><a href="巡检计划历史列表.html"><i class="productCat"></i><em>巡检计划历史列表</em></a></li>
+            <li><a href="安全检查管理.html"><i class="productCat"></i><em>安全检查管理</em></a></li>
+        </ul>
+        <ul>
+            <li><a href="维修计划列表.html"><i class="articleCat"></i><em>维修单管理</em></a></li>
+            <li><a href="维修日志列表.html"><i class="articleCat"></i><em>维修日志管理</em></a></li>
+        </ul>
+        <ul class="boxTitle">
+            <li><a href="维修故障类型汇总.html"><i class="articleCat"></i><em>维修故障统计</em></a></li>
+            <li><a href="员工业绩详情.html"><i class="articleCat"></i><em>员工业绩统计</em></a></li>
+            <li><a href="结算详情.html"><i class="articleCat"></i><em>结算</em></a></li>
+            <li><a href="报表.html"><i class="article"></i><em>报表</em></a></li>
+        </ul>
+        <ul class="bot">
+            <li ><a href="提案书管理.html"><i class="article"></i><em>提案书管理</em></a></li>
+        </ul>
+    </div></div>
+    <div id="dcMain"> <!-- 当前位置 -->
+        <div id="urHere">保养计划管理<b>></b><strong>保养计划新增</strong> </div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+            <div class="indexBox">
+            <div class="boxTitle">保养计划基本信息</div>
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+            <tr>
+                <th width="131">名称</th>
+                <th>内容</th>
+            </tr>
+            <tr>
+                <td align="right">计划名称</td>
+                <td>
+                    <input type="text" name="site_name" value="储罐设备检查维护" size="80" class="inpMain" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">周期</td>
+                <td>
+                    <select name="cat_id">
+                        <option value="0">半天</option>
+                        <option value="0">天</option>
+                        <option value="1">周</option>
+                        <option value="4">月</option>
+                        <option value="5">季度</option>
+                        <option value="2">年</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">计划开始日期</td>
+                <td>
+                    <input name="keyword" type="text" class="inpMain" value="2016-02-26" size="20" />
+                </td>
+
+            </tr>
+            <tr>  <td align="right">修改区分（修改页面显示）</td>
+                <td>
+                    <select name="cat_id">
+                        <option value="0">单月修改</option>
+                        <option value="1" selected>批量修改</option>
+
+                    </select>
+                </td></tr>
+        </table>
+                </div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="indexBoxTwo">
+                <tr>
+                    <td width="35%" valign="top" class="pr">
+                        <div class="indexBox">
+                            <div class="boxTitle">设备信息<a class="btn"  href="保养计划设备popup.html" style="float:right; font-size:12px; border-radius:5px;" >设备新增</a></div>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+                                        <tr>
+                                            <th>设备位号</th>
+                                        </tr>
+                                    <tr>
+                                        <td align="center">LB-T141</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">LB-T141</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">LB-T141</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">LB-T141</td>
+                                    </tr>
+                                </table>
+                            </ul>
+                        </div>
+                    </td>
+                    <td valign="top" class="pl">
+                        <div class="indexBox">
+                            <div class="boxTitle">检查项目信息<a class="btn" href="保养检查项目popup.html" style="float:right; font-size:12px; border-radius:5px;" >新增检查项目</a></div>
+                            <ul>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="7" class="tableBasic">
+                                    <tr>
+                                        <th width="45%">检查项目信息</th>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">罐体阀门检查</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">罐体盘梯检查</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">各路管线检查</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">罐体外观检查</td>
+                                    </tr>
+                                </table>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="action">
+                <a  class="btn" onclick="alert('保存成功！')"  >保存</a>
+                <a  class="btn" href="保养计划列表.html"  >返回</a>
+            </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="dcFooter">
+        <div id="footer">
+            <div class="line"></div>
+            <ul>
+                版权所有
+            </ul>
+        </div>
+    </div><!-- dcFooter 结束 -->
+    <div class="clear"></div> </div>
+<script src="http://www.mycodes.net/js/tongji.js"></script>
+</body>
+</html>

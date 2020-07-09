@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cachekey cachekeyid="cachekeyid" description="缓存主键配置">
+	<methoddef id="1234" description="com.repast.employee.dao.EmployeeManagerDao.getPageData">
+		<table-list>
+				<table-def name="STUDENT"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="queryUserPageList" description="com.repast.foodms.service.SysUserService.queryUserPageList">
+		<table-list>
+				<table-def name="SYS_USER"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="456" name="querylist" description="com.ies.core.system.BaseEntity">
+		<table-list>
+				<table-def name="KLB_BUILDING1"/>
+				<table-def name="KLB_BUILDING4"/>
+		</table-list>
+	</methoddef>
+	
+	<!-- cacheDefined start by lingy -->
+	
+	
+	<methoddef id="getCityList" description="com.repast.foodms.service.RestaurantInfoService.getCityList">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	
+	<methoddef id="getCodeListByKindParentCode" description="com.repast.foodms.service.RestaurantInfoService.getCodeListByKindParentCode">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	
+	<methoddef id="queryEstBuildingPageList" description="项目查询的cache">
+		<table-list>
+				<table-def name="EST_BUILDING"/>
+		</table-list>
+	</methoddef>
+	
+	<methoddef id="queryColAdrEstBuilding" description="查询栏目推荐项目">
+		<table-list>
+				<table-def name="EST_BUILDING"/>
+		</table-list>
+	</methoddef>
+	
+	<methoddef id="queryEstBuildingById" description="查询指定的项目信息">
+		<table-list>
+				<table-def name="EST_BUILDING"/>
+		</table-list>
+	</methoddef>
+	
+	<methoddef id="loadEstBuildingById" description="查询指定的项目信息">
+		<table-list>
+				<table-def name="EST_BUILDING"/>
+		</table-list>
+	</methoddef>
+
+	<methoddef id="queryIndexAdrInfo" description="获取首页推荐项目">
+		<table-list>
+				<table-def name="EST_BUILDING"/>
+		</table-list>
+	</methoddef>	
+	
+		<methoddef id="queryEstResourceByBizPkID" description="获取首页推荐项目">
+		<table-list>
+				<table-def name="EST_RESOURCE"/>
+		</table-list>
+	</methoddef>	
+	
+	<methoddef id="queryEstProductPageDetail" description="获取产品信息">
+		<table-list>
+				<table-def name="EST_PRODUCT"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="queryEstProductPageListByPhone" description="获取产品信息列表－手机端">
+		<table-list>
+				<table-def name="EST_PRODUCT"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="queryEstProductPageList" description="获取产品信息列表">
+		<table-list>
+				<table-def name="EST_PRODUCT"/>
+		</table-list>
+	</methoddef>
+	
+	
+	
+	<methoddef id="cache_codelist_provinceList" description="省份数据codelist">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="cache_cityList_list" description="cityList">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="cache_districtList_list" description="districtList">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="cache_mode_list" description="mode">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="cache_HireArea_list" description="HireArea">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="cache_priceArea_list" description="priceArea">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+		<methoddef id="cache_CoveredAreaSet_list" description="CoveredAreaSet">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="cache_FORMAT_list" description="FORMAT">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	<!-- cacheDefined start by lingy -->
+	
+	<!-- 二级缓存 -->
+	<methoddef id="cache_codelist_sexList" description="男女代码表数据">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	
+		<methoddef id="cache_codelist_ageAreaList" description="年龄段代码表数据">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+		<methoddef id="cache_codelist_useCityList" description="使用城市代码表数据">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="cache_codelist_bizTypeList" description="使用行业数据">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	
+	
+	<methoddef id="cache_codelist_accessModeList" description="约访方式">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="cache_codelist_careaidsList" description="推荐项目">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="cache_codelist_useidsList" description="场地用途">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="cache_codelist_relationship" description="客户关系">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+	
+		<methoddef id="cache_codelist_supplyType" description="供求类型">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>
+
+		<methoddef id="cache_codelist_buyTimeType" description="时间段">
+		<table-list>
+				<table-def name="SYS_CODELIST"/>
+		</table-list>
+	</methoddef>	
+	
+	<methoddef id="cache_queryAllEstBuilding" description="缓存全部项目信息">
+		<table-list>
+				<table-def name="EST_BUILDING"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="queryEstRedcustomPageList" description="缓存线索信息">
+		<table-list>
+				<table-def name="Est_redcustom"/>
+		</table-list>
+	</methoddef>
+	
+	<methoddef id="queryIndexAdrInfoApp" description="v2appHome项目查询的cache">
+		<table-list>
+				<table-def name="EST_BUILDING"/>
+		</table-list>
+	</methoddef>
+	
+	
+		<methoddef id="queryAppHomeEstnewsList_AdverVal" description="资讯list">
+		<table-list>
+				<table-def name="EST_NEWS"/>
+		</table-list>
+	</methoddef>
+	
+		<methoddef id="queryAppHomeEstnewsList_topPicNewsList" description="资讯top">
+		<table-list>
+				<table-def name="EST_NEWS"/>
+		</table-list>
+	</methoddef>
+	
+	<methoddef id="beforeUpdateEstNews" description="缓存资讯">
+		<table-list>
+				<table-def name="EST_NEWS"/>
+		</table-list>
+	</methoddef>
+	
+	
+	<methoddef id="getEestPartnerById" description="缓存合伙人实体数据">
+		<table-list>
+				<table-def name="EST_PARTNER"/>
+		</table-list>
+	</methoddef>
+
+	<methoddef id="queryEstRedcustomDetail" description="缓存线索实体数据">
+		<table-list>
+				<table-def name="EST_REDCUSTOM"/>
+		</table-list>
+	</methoddef>
+	
+	<methoddef id="queryEstRedcustomFlowListByCid" description="缓存线索跟踪的实体数据">
+		<table-list>
+				<table-def name="EST_REDCUSTOM_FLOW"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="queryEstRedcustomTotalCommissionByCid" description="缓存线索跟踪的实体数据">
+		<table-list>
+				<table-def name="EST_REDCUSTOM_COMMISSION"/>
+		</table-list>
+	</methoddef>
+	<methoddef id="queryAllCommissionByCid" description="缓存线索跟踪的实体数据">
+		<table-list>
+				<table-def name="EST_REDCUSTOM_COMMISSION"/>
+		</table-list>
+	</methoddef>
+		<methoddef id="queryAllCommissionByPid" description="佣金明细">
+		<table-list>
+				<table-def name="EST_REDCUSTOM_COMMISSION"/>
+				<table-def name="EST_REDCUSTOM"/>
+		</table-list>
+	</methoddef>
+	
+	<methoddef id="queryALLCashHistoryByPid" description="提现明细">
+		<table-list>
+				<table-def name="EST_CASHAPP"/>
+		</table-list>
+	</methoddef>
+	
+</cachekey>

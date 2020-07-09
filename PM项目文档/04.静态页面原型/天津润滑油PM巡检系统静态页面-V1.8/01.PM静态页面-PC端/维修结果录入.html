@@ -1,0 +1,319 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>PM巡检系统管理 </title>
+<meta name="Copyright" content="Douco Design." />
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/jquery.tab.js"></script>
+</head>
+<body>
+<div id="dcWrap">
+ <div id="dcHead">
+     <div id="head">
+         <div class="logo"></div>
+         <div class="nav">
+             <ul class="navRight">
+                 <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+                     <div class="drop mUser">
+                         <a href="#">修改密码</a>
+                         <a href="#">个人信息修改</a>
+                     </div>
+                 </li>
+                 <li class="noRight"><a href="#">退出</a></li>
+             </ul>
+         </div>
+     </div>
+</div>
+<!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
+     <ul class="top">
+         <li><a href="主页.html"><i class="home"></i><em>管理首页</em></a></li>
+     </ul>
+     <ul>
+         <li><a href="用户列表.html"><i class="page"></i><em>用户信息管理</em></a></li>
+         <li><a href="设备类型.html"><i class="page"></i><em>设备类型管理</em></a></li>
+         <li><a href="设备列表.html"><i class="page"></i><em>设备管理</em></a></li>
+         <li><a href="检查项目列表.html"><i class="page"></i><em>检查项目管理</em></a></li>
+     </ul>
+     <ul>
+         <li><a href="保养计划列表.html"><i class="productCat"></i><em>保养计划管理</em></a></li>
+         <li><a href="保养计划历史列表.html"><i class="productCat"></i><em>保养计划历史列表</em></a></li>
+         <li><a href="项目管理列表.html"><i class="productCat"></i><em>项目管理列表</em></a></li>
+         <li><a href="项目管理历史列表.html"><i class="productCat"></i><em>项目管理历史列表</em></a></li>
+         <li><a href="巡检计划列表.html"><i class="productCat"></i><em>巡检计划管理</em></a></li>
+         <li><a href="巡检计划历史列表.html"><i class="productCat"></i><em>巡检计划历史列表</em></a></li>
+         <li><a href="安全检查管理.html"><i class="productCat"></i><em>安全检查管理</em></a></li>
+     </ul>
+     <ul>
+         <li><a href="维修计划列表.html"><i class="articleCat"></i><em>维修单管理</em></a></li>
+         <li class="cur"><a href="维修日志列表.html"><i class="articleCat"></i><em>维修日志管理</em></a></li>
+     </ul>
+     <ul class="boxTitle">
+         <li><a href="维修故障类型汇总.html"><i class="articleCat"></i><em>维修故障统计</em></a></li>
+         <li><a href="员工业绩详情.html"><i class="articleCat"></i><em>员工业绩统计</em></a></li>
+         <li><a href="结算详情.html"><i class="articleCat"></i><em>结算</em></a></li>
+         <li><a href="报表.html"><i class="article"></i><em>报表</em></a></li>
+     </ul>
+     <ul class="bot">
+         <li ><a href="提案书管理.html"><i class="article"></i><em>提案书管理</em></a></li>
+     </ul>
+ </div></div>
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere">维修日志管理<b>></b><strong>维修日志管理</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+    <h3>维修结果录入</h3>
+    <script type="text/javascript">
+     
+     $(function(){ $(".idTabs").idTabs(); });
+     
+    </script>
+        <div id="main">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+         <tr>
+           <th width="131">名称</th>
+           <th>内容</th>
+         </tr>
+         <tr>
+             <td align="right">维修内容</td>
+             <td>
+                 <input type="text" name="site_title" value="设备故障描述前15个字" size="30" class="inpMain" />
+             </td>
+         </tr>
+         <tr>
+             <td align="right">要求完成日期</td>
+
+             <td>
+                 <input type="text" name="site_keywords" value="" size="80" class="inpMain" />
+             </td>
+
+         </tr>
+                  <tr>
+    <td align="right">人工费</td>
+          <td>
+              <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+
+                  <tr >
+                      <td width="150">单价(RMB)</td>
+                      <td><input type="text" name="site_title" value="20" size="30" class="inpMain" /></td>
+                      <td width="150">工时</td>
+                      <td><input type="text" name="site_title" value="20" size="30" class="inpMain" /></td>
+                  </tr>
+
+              </table>
+          </td>
+         </tr>
+
+
+            <tr>
+                <td  width="131" align="right">一次性费用</td>
+                <td>
+                    <input type="text" name="site_keywords" value="200" size="80" class="inpMain" />
+
+                </td>
+            </tr>
+            <tr>
+                <td  width="131" align="right">其他费用</td>
+                <td>
+                    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                        <tr>
+                            <td colspan="4" align="right"><a class="btn" >添加行</a> </td>
+                        </tr>
+                        <tr >
+                            <th align="center">分类</th>
+                            <th align="center">名称</th>
+
+                            <th align="center">数量</th>
+
+                            <th align="center">单价</th>
+
+
+                            <th align="center">操作</th>
+                        </tr>
+                        <tr >
+                            <td><select name="cat_id">
+                                <option value="0">未分类</option>
+                                <option value="1">材料费</option>
+                                <option value="4">运费</option>
+                            </select></td>
+                            <td  align="center"><input type="text" name="site_title" value="" size="30" class="inpMain" /></td>
+                            <td  align="center"><input type="text" name="site_title" value="" size="30" class="inpMain" /></td>
+                            <td align="center"><input type="text" name="site_title" value="" size="30" class="inpMain" /></td>
+                            <td align="center">删除</td>
+                        </tr>
+                        <tr >
+                            <td><select name="cat_id">
+                                <option value="0">未分类</option>
+                                <option value="1">材料费</option>
+                                <option value="4">运费</option>
+                            </select></td>
+                            <td  align="center"><input type="text" name="site_title" value="" size="30" class="inpMain" /></td>
+                            <td  align="center"><input type="text" name="site_title" value="" size="30" class="inpMain" /></td>
+                            <td align="center"><input type="text" name="site_title" value="" size="30" class="inpMain" /></td>
+                            <td align="center">删除</td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+            <tr>
+                <td  width="131" align="right">总费用</td>
+                <td>
+                    <input type="text" name="site_keywords" value="不可编辑" size="80" class="inpMain" />
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td align="right">完成状态</td>
+
+                <td>
+                    <select name="cat_id">
+                        <option value="0">请选择</option>
+                        <option value="1"> 未完成</option>
+                        <option value="2"> 已完成</option>
+                    </select>
+                </td>
+
+            </tr>
+
+         <tr>
+             <td align="right">实际完成日期</td>
+
+             <td>
+                 <input type="text" name="site_keywords" value="不可编辑，提交后自动生成" size="80" class="inpMain" />
+             </td>
+
+         </tr>
+            <tr>
+                <td align="right">备注</td>
+                <td>
+                    <textarea name="code" cols="83" rows="8" class="textArea" /></textarea>
+                </td>
+            </tr>
+
+                  <tr>
+          <td align="right">停机时间</td>
+          <td>
+              <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                  <tr>
+                      <th align="left">设备名称</th>
+                      <th align="left">停机时间</th>
+                      <th>维修内容</th>
+                  </tr>
+                  <tr>
+                      <td align="left">阀门1</td>
+                      <td><input type="text" name="site_title" value="1小时"  class="inpMain" /></td>
+                      <td><select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 电议</option>
+                          <option value="2"> 机械</option>
+                      </select> <select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 灌装线</option>
+                          <option value="2"> 球阀</option>
+                      </select> <select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 漏油</option>
+                          <option value="2"> 声音异常</option>
+                      </select></td>
+                  </tr>
+
+                  <tr>
+                      <td align="left">阀门1</td>
+                      <td><input type="text" name="site_title" value="1小时"  class="inpMain" /></td>
+                      <td><select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 电议</option>
+                          <option value="2"> 机械</option>
+                      </select>
+                          <select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 灌装线</option>
+                          <option value="2"> 球阀</option>
+                      </select> <select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 漏油</option>
+                          <option value="2"> 声音异常</option>
+                      </select></td>
+                  </tr>
+
+                  <tr>
+                      <td align="left">阀门1</td>
+                      <td><input type="text" name="site_title" value="1小时"  class="inpMain" /></td>
+                      <td><select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 电议</option>
+                          <option value="2"> 机械</option>
+                      </select> <select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 灌装线</option>
+                          <option value="2"> 球阀</option>
+                      </select> <select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 漏油</option>
+                          <option value="2"> 声音异常</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                      <td align="left">阀门1</td>
+                      <td><input type="text" name="site_title" value="1小时"  class="inpMain" /></td>
+                      <td><select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 电议</option>
+                          <option value="2"> 机械</option>
+                      </select> <select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 灌装线</option>
+                          <option value="2"> 球阀</option>
+                      </select> <select name="cat_id">
+                          <option value="0">请选择</option>
+                          <option value="1"> 漏油</option>
+                          <option value="2"> 声音异常</option>
+                      </select></td>
+                  </tr>
+
+              </table>
+                                </td>
+         </tr>
+<tr>
+
+            <tr>
+                <td  width="131" align="right"></td>
+                <td>
+                    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                        <tr>
+
+
+                            <td >
+                                <a  class="btn" onclick="alert('保存成功！')"  >保存</a>
+                                <a  class="btn" href="维修日志列表.html"  >返回</a>
+                                <a  class="btn"href=" 报价内容popup.html"  >查看报价</a>
+
+                            </td>
+
+
+
+
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+</tr>
+                                    </table>
+        </div> </div></div></div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+</body>
+</html>

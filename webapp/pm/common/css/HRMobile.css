@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/* Demo Page styling, you can ignore this in your implementation */
+
+.demo-iframe {
+	padding: 10px 10px 10px 10px;
+	text-shadow: none;
+}
+/* Demo page styling END */
+    /*************************/
+    
+/* Create, remove, update demo styling */
+.demo-comp-listview .mbsc-lv-fixed-header-ctx {
+	text-shadow: none;
+}
+.demo-comp-listview .demo-iframe {
+	padding: 0;
+}
+.demo-comp-listview .demo-note {
+	margin: 0.1rem;
+}
+.md-demo-note {
+	cursor: pointer;
+}
+.md-wo-list {
+	line-height: 0.3rem;
+	text-shadow: none;
+}
+.md-wo-list li {
+	line-height: normal;
+}
+.md-wo-empty {
+	padding: 0.1rem;
+}

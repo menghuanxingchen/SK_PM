@@ -1,0 +1,7 @@
+2019-09-16 17:32:47 [cn.jiguang.common.connection.NativeHttpClient]-[WARN] Got error response - responseCode:400, responseContent:{"msg_id":"20266227603386684","error":{"code":1011,"message":"cannot find user by this audience"}}
+   2019-09-16 17:32:47 [cn.jiguang.common.connection.NativeHttpClient]-[ERROR] Your request params is invalid. Please check them according to error message.
+   2019-09-16 17:33:05 [cn.jiguang.common.connection.NativeHttpClient]-[WARN] Got error response - responseCode:400, responseContent:{"msg_id":"9007221863949957","error":{"code":1011,"message":"cannot find user by this audience"}}
+   2019-09-16 17:33:05 [cn.jiguang.common.connection.NativeHttpClient]-[ERROR] Your request params is invalid. Please check them according to error message.
+   2019-09-16 17:34:18 [cn.jiguang.common.connection.NativeHttpClient]-[WARN] Got error response - responseCode:400, responseContent:{"msg_id":"58546819278906758","error":{"code":1011,"message":"cannot find user by this audience"}}
+   2019-09-16 17:34:18 [cn.jiguang.common.connection.NativeHttpClient]-[ERROR] Your request params is invalid. Please check them according to error message.
+   

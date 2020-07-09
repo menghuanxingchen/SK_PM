@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>PM_Login</title>
+<link rel="stylesheet" href="css/style_login.css">
+
+<!--radio-->
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/handsome.min.js" type="text/javascript"></script> 
+<script src="js/scripts.js" type="text/javascript"></script>
+
+</head>
+
+
+<body>
+
+    <div id="com_body">   
+    
+         <div id="login">
+            
+            <div class="lolo"><img src="images/logo.png" /><span>PM系统</span></div>
+    
+            <div class="forms">  
+    
+                <form action="#" method="get">
+    
+                    <div class="h90"><input type="text" value="用户名" onclick="value='';focus()" /></div>
+                    <input type="password" value="密码" onclick="value='';focus()" />
+                            
+                    <div class="choose">
+                        <input id="" type="radio" name="ch" class="radio" value="" checked/>网页版&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input id="" name="en" type="radio" class="radio" value="" />手机版
+                    </div>                                                   
+    
+                </form>
+                <a href="" class="btn1">登 录</a>
+    
+            </div>
+                
+        </div>
+    
+    </div>
+    <!-- end login -->
+
+   <script>
+        (function (doc, win) {
+          var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+              var clientWidth = docEl.clientWidth;
+              oSize = 100 * (clientWidth / 720);
+              
+              if (!clientWidth) return;
+              if (oSize > 75) {
+                oSize = 75; // 限制rem值 1080(最大宽度) / 7.2（设计宽度） =100
+				var com_body = document.getElementById('com_body');  
+          		com_body.style.width="7.2rem";
+				com_body.style.margin="0 auto";
+               }
+              docEl.style.fontSize = oSize + 'px';
+              
+            };
+    
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+     
+</body>
+</html>

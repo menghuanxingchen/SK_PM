@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>PM巡检系统管理 </title>
+<meta name="Copyright" content="Douco Design." />
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/jquery.autotextarea.js"></script>
+    <style type="text/css">
+        body {padding:0;margin:40px;font-size:9pt;font-family:Helvetica,Geneva,sans-serif;}
+        h3 {font-weight:normal;display:block;width:600px;text-align:center;}
+        ul#q-graph {
+            border:2px solid #0063be;
+            background:#adfe12 url(http://files.jb51.net/file_images/article/201505/2015512160152351.png) repeat-x scroll 0 0 !important;
+            background:#adfe12 repeat-x scroll 0 0;
+            height:300px !important;
+            height:304px;
+            width:600px;
+            position:relative;
+            list-style:none;
+            margin:1.1em 1em 3.5em;
+            padding:0;
+        }
+        #q-graph li {
+            position:absolute;
+            text-align:center;
+            bottom:0;
+            padding:0
+        margin:0;
+        }
+        li.qtr {
+            width:150px;
+            height:300px;
+            border-right:1px dotted #41a3e2;
+            z-index:2;
+        }
+        li#q1 {left:0;}
+        li#q2 {left:150px;}
+        li#q3 {left:300px;}
+        li#q4 {left:450px;border-right:none;} #q-graph ul {list-style:none;} li.bar {
+                                                                                 width:34px;
+                                                                                 color:#fff;
+                                                                             }
+        li.north {
+            left:0px;
+            background:#ddd url(http://files.jb51.net/file_images/article/201505/2015512155936873.gif) no-repeat 0 0;
+        }
+        li.south {
+            left:30px;
+            background:#ddd url(http://files.jb51.net/file_images/article/201505/2015512155936873.gif) no-repeat -34px 0;
+        }
+        li.west {
+            left:60px;
+            background:#ddd url(http://files.jb51.net/file_images/article/201505/2015512155936873.gif) no-repeat -68px 0;
+        }
+        li.east {
+            left:90px;
+            background:#ddd url(http://files.jb51.net/file_images/article/201505/2015512155936873.gif) no-repeat -102px 0;
+        }
+        li#ticks {
+              left:0;
+              height:300px;
+              width:100%;
+              z-index:1;
+          }
+        div.ticks {
+            position:relative;
+            height:60px;
+            border-top:1px dotted #41a3e2;
+        }
+        div.ticks:first-child {border-top:none;}
+        div.ticks p {
+            position:absolute;
+            left:103%;
+            top:-11pt;
+        }
+    </style>
+</head>
+<body>
+<div id="dcWrap">
+ <div id="dcHead">
+     <div id="head">
+         <div class="logo"></div>
+         <div class="nav">
+             <ul class="navRight">
+                 <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+                     <div class="drop mUser">
+                         <a href="#">修改密码</a>
+                         <a href="#">个人信息修改</a>
+                     </div>
+                 </li>
+                 <li class="noRight"><a href="#">退出</a></li>
+             </ul>
+         </div>
+     </div>
+</div>
+<!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
+    <ul class="top">
+        <li><a href="主页.html"><i class="home"></i><em>管理首页</em></a></li>
+    </ul>
+    <ul>
+        <li><a href="用户列表.html"><i class="page"></i><em>用户信息管理</em></a></li>
+        <li><a href="设备类型.html"><i class="page"></i><em>设备类型管理</em></a></li>
+        <li><a href="设备列表.html"><i class="page"></i><em>设备管理</em></a></li>
+        <li><a href="检查项目列表.html"><i class="page"></i><em>检查项目管理</em></a></li>
+    </ul>
+    <ul>
+        <li><a href="保养计划列表.html"><i class="productCat"></i><em>保养计划管理</em></a></li>
+        <li><a href="保养计划历史列表.html"><i class="productCat"></i><em>保养计划历史列表</em></a></li>
+        <li><a href="项目管理列表.html"><i class="productCat"></i><em>项目管理列表</em></a></li>
+        <li><a href="项目管理历史列表.html"><i class="productCat"></i><em>项目管理历史列表</em></a></li>
+        <li><a href="巡检计划列表.html"><i class="productCat"></i><em>巡检计划管理</em></a></li>
+        <li><a href="巡检计划历史列表.html"><i class="productCat"></i><em>巡检计划历史列表</em></a></li>
+        <li><a href="安全检查管理.html"><i class="productCat"></i><em>安全检查管理</em></a></li>
+    </ul>
+    <ul>
+        <li ><a href="维修计划列表.html"><i class="articleCat"></i><em>维修单管理</em></a></li>
+        <li><a href="维修日志列表.html"><i class="articleCat"></i><em>维修日志管理</em></a></li>
+    </ul>
+    <ul class="boxTitle">
+        <li><a href="维修故障类型汇总.html"><i class="articleCat"></i><em>维修故障统计</em></a></li>
+        <li class="cur"><a href="员工业绩详情.html"><i class="articleCat"></i><em>员工业绩统计</em></a></li>
+        <li><a href="结算详情.html"><i class="articleCat"></i><em>结算</em></a></li>
+        <li><a href="报表.html"><i class="article"></i><em>报表</em></a></li>
+    </ul>
+    <ul class="bot">
+        <li ><a href="提案书管理.html"><i class="article"></i><em>提案书管理</em></a></li>
+    </ul>
+</div></div>
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere">数据汇总<b>></b><strong>员工业绩列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+<h3><a href="维修计划管理.html?rec=add"></a>员工业绩列表</h3>
+     <div class="filter">
+         <form action="#" method="post">
+     <table width="100%" >
+         <tr>
+
+             <td ><h1>日期</h1></td>
+             <td >
+                 <input name="keyword" type="text" class="inpMain" value="" size="20" />
+             ~
+                 <input name="keyword" type="text" class="inpMain" value="" size="20" />
+             </td>
+             <td >
+                 <a class="btnGray" href="员工业绩详情.html">查询</a>
+             </td>
+         </tr>
+     </table>
+             </form>
+         </div>
+
+
+        <div id="list">
+    <form name="action" method="post" action="#">
+        <ul id="q-graph">
+            <li id="q1" class="qtr">张三
+                <ul>
+                    <li class="north bar" style="height:100px;">4</li>
+
+                </ul></li>
+            <li id="q2" class="qtr">李四
+                <ul>
+                    <li class="north bar" style="height:200px;">6</li>
+
+                </ul></li>
+            <li id="q3" class="qtr">王二麻子
+                <ul>
+                    <li class="north bar" style="height:260px;">8</li>
+                </ul></li>
+
+            <li id="ticks">
+                <div class="ticks"><p>8</p></div>
+                <div class="ticks"><p>6</p></div>
+                <div class="ticks"><p>4</p></div>
+                <div class="ticks"><p>2</p></div>
+            </li>
+        </ul>
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+     <tr>
+
+      <th width="40" align="center">序号</th>
+         <th width="150" align="center">员工</th>
+         <th width="80" align="center">按时次数</th>
+         <th width="80" align="center">逾期次数</th>
+         <th width="150" align="center">计划执行数量</th>
+         <th width="150" align="center">详情</th>
+     </tr>
+          <tr>
+
+      <td align="center">1</td>
+              <td align="center">张三</td>
+              <td align="center">2</td>
+
+              <td align="center">2</td>
+
+              <td align="center">4</td>
+              <td align="center">
+                  <a href="员工分工作类别业绩统计.html">详情</a>
+              </td>
+
+     </tr>
+        <tr>
+
+            <td align="center">2</td>
+            <td align="center">李四</td>
+            <td align="center">2</td>
+
+            <td align="center">4</td>
+
+            <td align="center">6</td>
+            <td align="center">
+                <a href="员工分工作类别业绩统计.html">详情</a>
+            </td>
+
+        </tr>
+        <tr>
+
+            <td align="center">3</td>
+            <td align="center">王二麻子</td>
+            <td align="center">4</td>
+
+            <td align="center">4</td>
+
+            <td align="center">8</td>
+            <td align="center">
+                <a href="员工分工作类别业绩统计.html">详情</a>
+            </td>
+        </tr>
+
+         </table>
+        <div class="pager">总计 10 个记录，共 1 页，当前第 1 页 | <a href="#">第一页</a> 上一页 下一页 <a href="#">最末页</a></div>           </div>
+
+
+    </form>
+    </div>
+    <div class="clear"></div>
+
+ </div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+ <script type="text/javascript">
+ 
+ onload = function()
+ {
+   document.forms['action'].reset();
+ }
+
+ function douAction()
+ {
+     var frm = document.forms['action'];
+
+     frm.elements['new_cat_id'].style.display = frm.elements['action'].value == 'category_move' ? '' : 'none';
+ }
+ 
+ </script>
+</body>
+</html>

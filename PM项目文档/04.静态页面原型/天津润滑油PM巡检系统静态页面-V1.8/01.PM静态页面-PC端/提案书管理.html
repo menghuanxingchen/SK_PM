@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>PM巡检系统管理 </title>
+<meta name="Copyright" content="Douco Design." />
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/jquery.autotextarea.js"></script>
+</head>
+<body>
+<div id="dcWrap">
+ <div id="dcHead">
+     <div id="head">
+         <div class="logo"></div>
+         <div class="nav">
+             <ul class="navRight">
+                 <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+                     <div class="drop mUser">
+                         <a href="#">修改密码</a>
+                         <a href="#">个人信息修改</a>
+                     </div>
+                 </li>
+                 <li class="noRight"><a href="#">退出</a></li>
+             </ul>
+         </div>
+     </div>
+</div>
+<!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
+    <ul class="top">
+        <li><a href="主页.html"><i class="home"></i><em>管理首页</em></a></li>
+    </ul>
+    <ul>
+        <li><a href="用户列表.html"><i class="page"></i><em>用户信息管理</em></a></li>
+        <li><a href="设备类型.html"><i class="page"></i><em>设备类型管理</em></a></li>
+        <li><a href="设备列表.html"><i class="page"></i><em>设备管理</em></a></li>
+        <li><a href="检查项目列表.html"><i class="page"></i><em>检查项目管理</em></a></li>
+    </ul>
+    <ul>
+        <li><a href="保养计划列表.html"><i class="productCat"></i><em>保养计划管理</em></a></li>
+        <li><a href="保养计划历史列表.html"><i class="productCat"></i><em>保养计划历史列表</em></a></li>
+        <li><a href="项目管理列表.html"><i class="productCat"></i><em>项目管理列表</em></a></li>
+        <li><a href="项目管理历史列表.html"><i class="productCat"></i><em>项目管理历史列表</em></a></li>
+        <li><a href="巡检计划列表.html"><i class="productCat"></i><em>巡检计划管理</em></a></li>
+        <li><a href="巡检计划历史列表.html"><i class="productCat"></i><em>巡检计划历史列表</em></a></li>
+        <li><a href="安全检查管理.html"><i class="productCat"></i><em>安全检查管理</em></a></li>
+    </ul>
+    <ul>
+        <li ><a href="维修计划列表.html"><i class="articleCat"></i><em>维修单管理</em></a></li>
+        <li><a href="维修日志列表.html"><i class="articleCat"></i><em>维修日志管理</em></a></li>
+    </ul>
+    <ul class="boxTitle">
+        <li><a href="维修故障类型汇总.html"><i class="articleCat"></i><em>维修故障统计</em></a></li>
+        <li><a href="员工业绩详情.html"><i class="articleCat"></i><em>员工业绩统计</em></a></li>
+        <li><a href="结算详情.html"><i class="articleCat"></i><em>结算</em></a></li>
+        <li><a href="报表.html"><i class="article"></i><em>报表</em></a></li>
+    </ul>
+    <ul class="bot">
+        <li class="cur"><a href="提案书管理.html"><i class="article"></i><em>提案书管理</em></a></li>
+    </ul>
+</div></div>
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere">提案书管理<b>></b><strong>提案书列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+<h3><a href="提案书新增.html?rec=add" class="actionBtn add">提案书申请</a>提案书列表</h3>
+     <div class="filter">
+         <form action="#" method="post">
+     <table width="100%" >
+         <tr>
+             <td ><h1>审批状态</h1></td>
+             <td >
+                 <select name="cat_id">
+                     <option value="0">请选择</option>
+                     <option value="1"> 待审批</option>
+
+                     <option value="0">待分配</option>
+                     <option value="2"> 厂长待审批</option>
+                     <option value="2"> 待报价</option>
+                     <option value="0">待确认</option>
+
+                     <option value="2"> 厂长待确认</option>
+                     <option value="0">完成</option>
+                     <option value="0">驳回</option>
+                 </select>
+             </td>
+             <td ><h1>申请部门</h1></td>
+             <td >
+                 <select name="cat_id">
+                     <option value="0">请选择</option>
+                     <option value="1">维修部门</option>
+                     <option value="2">检查部门</option>
+                 </select>
+             </td>
+             <td ><h1>申请日期</h1></td>
+             <td >
+                 <input name="keyword" type="text" class="inpMain" value="2016-01-01" size="20" />
+             ~
+                 <input name="keyword" type="text" class="inpMain" value="2016-12-30" size="20" />
+             </td>
+             <td ><h1>内容</h1></td>
+             <td >
+                 <input name="keyword" type="text" class="inpMain" value="" size="20" />
+             </td>
+             <td >
+                 <a class="btnGray" href="#">查询</a>
+             </td>
+         </tr>
+     </table>
+             </form>
+         </div>
+        <div id="list">
+    <form name="action" method="post" action="#">
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+     <tr>
+          <th width="40" align="center">序号</th>
+          <th width="150">提案名</th>
+         <th width="150">申请部门</th>
+         <th width="150">申请人</th>
+          <th width="150" align="center">现况及问题点</th>
+         <th width="150" align="center">改善案</th>
+         <th width="150" align="center">费用</th>
+          <th width="130" align="center">审批状态</th>
+          <th width="100" align="center">审批</th>
+         <th width="100" align="center">操作</th>
+          <th width="150" align="center">详情</th>
+     </tr>
+          <tr>
+      <td align="center">1</td>
+      <td  align="center"><a href="#">20160901001</a></td>
+              <td align="center">维修部门</td>
+              <td align="center"><a href="#">张三</a></td>
+              <td align="center">问题1</td>
+
+              <td align="center">改善问题</td>
+              <td align="center">100</td>
+              <td align="center">待审批</td>
+
+              <td align="center">
+                  <a href="#">审批</a> | <a href="#">驳回</a>
+              </td>
+
+              <td align="center">
+                  <a href="提案书新增.html">修改</a> | <a href="#"> 删除</a>
+              </td>
+              <td align="center">
+                  <a href="提案书新增.html">详情</a>
+              </td>
+     </tr>
+          <tr>
+      <td align="center">2</td>
+              <td  align="center"><a href="#">20160901001</a></td>
+              <td align="center">维修部门</td>
+              <td align="center"><a href="#">张三</a></td>
+              <td align="center">问题1</td>
+
+              <td align="center">改善问题</td>
+              <td align="center">100</td>
+              <td align="center">待分配</td>
+
+              <td align="center">
+                  <a href="工人分配popup.html" >分配</a> | <a href="#">驳回</a>
+
+              </td>
+              <td align="center">
+                  <a href="提案书新增.html">修改</a> | <a href="#"> 删除</a>
+              </td>
+              <td align="center">
+                  <a href="提案书新增.html">详情</a>
+              </td>
+     </tr>
+          <tr>
+      <td align="center">3</td>
+              <td  align="center"><a href="#">20160901001</a></td>
+              <td align="center">维修部门</td>
+              <td align="center"><a href="#">张三</a></td>
+              <td align="center">问题1</td>
+
+              <td align="center">改善问题</td>
+              <td align="center">100</td>
+              <td align="center">待报价</td>
+              <td align="center"><a href="提案书新增.html" >报价</a></td>
+              <td align="center">
+                  <a href="提案书新增.html">修改</a> | <a href="#"> 删除</a>
+              </td>
+              <td align="center">
+                  <a href="提案书新增.html">详情</a>
+              </td>
+     </tr>
+          <tr>
+      <td align="center">4</td>
+              <td  align="center"><a href="#">20160901001</a></td>
+              <td align="center">维修部门</td>
+              <td align="center"><a href="#">张三</a></td>
+              <td align="center">问题1</td>
+
+              <td align="center">改善问题</td>
+              <td align="center">100</td>
+              <td align="center">厂长待审批</td>
+              <td align="center">
+                  <a href="#">审批</a> | <a href="#">驳回</a>
+              </td>
+              <td align="center">
+                  <a href="提案书新增.html">修改</a> | <a href="#"> 删除</a>
+              </td>
+              <td align="center">
+                  <a href="提案书新增.html">详情</a>
+              </td>
+     </tr>
+        <tr>
+        <td align="center">4</td>
+        <td  align="center"><a href="#">20160901001</a></td>
+        <td align="center">厂长</td>
+        <td align="center"><a href="#">张三</a></td>
+        <td align="center">问题1</td>
+
+        <td align="center">改善问题</td>
+        <td align="center">100</td>
+        <td align="center">待确认</td>
+
+        <td align="center">
+            <a href="#">确认</a>
+        </td>
+        <td align="center">
+            <a href="提案书新增.html">修改</a> | <a href="#"> 删除</a>
+        </td>
+        <td align="center">
+            <a href="提案书新增.html">详情</a>
+        </td>
+    </tr>
+        <tr>
+            <td align="center">4</td>
+            <td  align="center"><a href="#">20160901001</a></td>
+            <td align="center">厂长</td>
+            <td align="center"><a href="#">张三</a></td>
+            <td align="center">问题1</td>
+
+            <td align="center">改善问题</td>
+            <td align="center">100</td>
+            <td align="center">厂长待确认</td>
+
+            <td align="center">
+                <a href="#">确认</a>
+            </td>
+            <td align="center">
+                <a href="提案书新增.html">修改</a> | <a href="#"> 删除</a>
+            </td>
+            <td align="center">
+                <a href="提案书新增.html">详情</a>
+            </td>
+        </tr>
+         </table>
+        <div class="pager">总计 10 个记录，共 1 页，当前第 1 页 | <a href="#">第一页</a> 上一页 下一页 <a href="#">最末页</a></div>           </div>
+    </form>
+    </div>
+    <div class="clear"></div>
+ </div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+ <script type="text/javascript">
+ 
+ onload = function()
+ {
+   document.forms['action'].reset();
+ }
+
+ function douAction()
+ {
+     var frm = document.forms['action'];
+
+     frm.elements['new_cat_id'].style.display = frm.elements['action'].value == 'category_move' ? '' : 'none';
+ }
+ 
+ </script>
+</body>
+</html>

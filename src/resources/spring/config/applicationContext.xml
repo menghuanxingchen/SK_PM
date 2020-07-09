@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.1.xsd			
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-3.1.xsd			
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd			
+	http://www.springframework.org/schema/cache
+	http://www.springframework.org/schema/cache/spring-cache-3.1.xsd	
+    http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd		 
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/task
+    http://www.springframework.org/schema/task/spring-task-3.1.xsd
+	"
+	default-autowire="byName" default-lazy-init="false">
+	  <context:component-scan base-package="com.*"/>
+	  
+	       <mvc:annotation-driven>
+	     	<mvc:message-converters>  
+	            <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">  
+	               <property name="objectMapper">
+			        <bean class="com.repast.core.spring.mvc.mapper.CoreObjectMapper">
+			          <property name="dateFormat">
+			            <!-- 此处用来处理ResposeBody的返回方式时的日期处理 智能日期转换 -->
+			            <bean class="com.repast.core.tool.SmartDateFormat"/>
+			          </property>
+			        </bean>
+			      </property>
+	            </bean>  
+	        </mvc:message-converters>
+     	<mvc:argument-resolvers>
+     		<bean class="com.repast.core.spring.mvc.method.annotation.RequestJsonParamMethodArgumentResolver"/>
+            <bean class="com.repast.core.spring.mvc.method.annotation.FormModelMethodArgumentResolver"/>
+        </mvc:argument-resolvers>
+ 	 </mvc:annotation-driven>
+ 	<mvc:interceptors>
+ 	 	<!--  <mvc:interceptor>  
+ 	 	  需拦截的地址  
+                        一级目录  
+            <mvc:mapping path="/*.do" />  
+            <mvc:mapping path="/*.ajax" />  
+            <mvc:mapping path="/*.htm" />  
+  
+                        二级目录  
+            <mvc:mapping path="/*/*.do" />  
+            <mvc:mapping path="/*/*.ajax" />  
+            <mvc:mapping path="/*/*.htm" />  
+            需排除拦截的地址  
+            <mvc:exclude-mapping path="/login.jsp"/>  
+            </mvc:interceptor> -->
+    	<!-- <bean class="com.repast.core.spring.auth.interceptor.AuthorityInterceptor"></bean> -->
+    	<bean class="com.repast.core.handler.CommonInterceptor"></bean>    
+    </mvc:interceptors> 
+    <!--配置拦截器, 多个拦截器,顺序执行 -->  
+	<!-- <mvc:interceptors>    
+	    <mvc:interceptor>    
+	        匹配的是url路径， 如果不配置或/**,将拦截所有的Controller  
+	        <mvc:mapping path="/" />  
+	        <mvc:mapping path="/pm/foodms/**" />  
+	        <mvc:mapping path="/test/**" />  
+	        <bean class="com.repast.core.handler.CommonInterceptor"></bean>    
+	    </mvc:interceptor>  
+	    当设置多个拦截器时，先按顺序调用preHandle方法，然后逆序调用每个拦截器的postHandle和afterCompletion方法  
+	</mvc:interceptors>  -->
+    
+    <!-- <bean id="apiConfig" class="com.repast.weixin.fastweixin.api.config.ApiConfig" scope="singleton" lazy-init="false">
+		<constructor-arg value="wx7716b3d1dd94acbe"/>
+		<constructor-arg value="e98bf4ae7b589560cbb34cf96e8efc61"/>
+		<constructor-arg value="true"/>
+	</bean> -->
+    <bean id="applicationContextUtil" class="com.repast.core.tool.ApplicationContextUtil"></bean> 
+		<!-- cache begin 
+	   <bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath*:redis/redis.properties</value>
+			</list>
+		</property>
+	</bean> 
+    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig" lazy-init="false">
+		<property name="maxTotal" value="${redis.maxTotal}"></property>
+		<property name="maxIdle" value="${redis.maxIdle}" /> 
+		<property name="maxWaitMillis" value="${redis.maxWait}" />
+		<property name="testOnBorrow" value="${redis.testOnBorrow}" />
+	</bean>
+	
+	<bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+		p:host-name="${redis.host}" p:port="${redis.port}" p:password="${redis.pass}"  p:pool-config-ref="poolConfig"/>
+	
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate" >
+		<property name="connectionFactory" 	ref="connectionFactory" />
+	</bean>		
+	<bean id="redisCache" class="com.repast.core.cache.impl.RedisCacheClient" >
+		<property name="redisTemplate" ref="redisTemplate"/>
+	</bean>
+ cache end -->
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		
+		<property name="jdbcUrl">
+			<!--<value>jdbc:mysql://10.120.253.30:3306/pm?useUnicode=true&amp;characterEncoding=utf-8</value> -->
+			 <value>jdbc:mysql://114.113.147.116:3036/pm?useUnicode=true&amp;characterEncoding=utf-8</value>
+		</property>
+
+		<property name="user">
+			<value>root</value>
+		</property>
+
+		<property name="password">
+		  <!--<value>china123!</value>-->
+		 <value>china123!</value>
+		</property>
+
+		<!--连接池中保留的最小连接数。 -->
+		<property name="minPoolSize">
+			<value>5</value>
+		</property>
+
+		<!--连接池中保留的最大连接数。Default: 15 -->
+		<property name="maxPoolSize">
+			<value>30</value>
+		</property>
+
+		<!--初始化时获取的连接数，取值应在minPoolSize与maxPoolSize之间。Default: 3 -->
+		<property name="initialPoolSize">
+			<value>10</value>
+		</property>
+
+		<!--最大空闲时间,60秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+		<property name="maxIdleTime">
+			<value>60</value>
+		</property>
+
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+		<property name="acquireIncrement">
+			<value>5</value>
+		</property>
+
+		<!--JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量。但由于预缓存的statements 属于单个connection而不是整个连接池。所以设置这个参数需要考虑到多方面的因素。 
+			如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。Default: 0 -->
+		<property name="maxStatements">
+			<value>0</value>
+		</property>
+
+		<!--每60秒检查所有连接池中的空闲连接。Default: 0 -->
+		<property name="idleConnectionTestPeriod">
+			<value>60</value>
+		</property>
+
+		<!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->
+		<property name="acquireRetryAttempts">
+			<value>30</value>
+		</property>
+
+		<!--获取连接失败将会引起所有等待连接池来获取连接的线程抛出异常。但是数据源仍有效 保留，并在下次调用getConnection()的时候继续尝试获取连接。如果设为true，那么在尝试 
+			获取连接失败后该数据源将申明已断开并永久关闭。Default: false -->
+		<property name="breakAfterAcquireFailure">
+			<value>true</value>
+		</property>
+
+		<!--因性能消耗大请只在需要的时候使用它。如果设为true那么在每个connection提交的 时候都将校验其有效性。建议使用idleConnectionTestPeriod或automaticTestTable 
+			等方法来提升连接测试的性能。Default: false -->
+		<property name="testConnectionOnCheckout">
+			<value>false</value>
+		</property>
+
+	</bean>
+	
+	
+	<bean id="jdbcTemplate"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+
+			<!-- 事务  -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- 通过AOP配置提供事务增强，让service包下所有Bean的所有方法拥有事务 -->
+	<aop:config>
+		<aop:pointcut id="serviceMethod" expression="execution(* com.*.*.service.*.*(..))" />
+		<aop:advisor pointcut-ref="serviceMethod" advice-ref="txAdvice" />
+	</aop:config>
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+		   <tx:method name="save*" propagation="REQUIRED" />  
+           <tx:method name="add*" propagation="REQUIRED" />  
+           <tx:method name="create*" propagation="REQUIRED" />  
+           <tx:method name="insert*" propagation="REQUIRED" />  
+           <tx:method name="update*" propagation="REQUIRED" />  
+           <tx:method name="merge*" propagation="REQUIRED" />  
+           <tx:method name="del*" propagation="REQUIRED" />  
+           <tx:method name="remove*" propagation="REQUIRED" />  
+           <tx:method name="put*" propagation="REQUIRED" />  
+           <tx:method name="get*" propagation="SUPPORTS" read-only="true" />  
+           <tx:method name="count*" propagation="SUPPORTS" read-only="true" />  
+           <tx:method name="find*" propagation="SUPPORTS" read-only="true" />  
+           <tx:method name="list*" propagation="SUPPORTS" read-only="true" />  
+           <tx:method name="*" propagation="SUPPORTS" read-only="true" />
+		</tx:attributes>
+	 </tx:advice>
+	 <!-- 放服务器打开  -->	 
+  	 <task:annotation-driven scheduler="myScheduler"/>   
+ 	 <task:scheduler id="myScheduler" pool-size="5"/>
+</beans>

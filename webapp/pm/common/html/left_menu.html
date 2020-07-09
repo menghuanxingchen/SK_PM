@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JS实现鼠标点击展开/隐藏表格行</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script language="javascript">
+function TestBlack(TagName){
+ var obj = document.getElementById(TagName);
+ if(obj.style.display==""){
+  obj.style.display = "none";
+  document.getElementById( "aaa" ).style.margin = "30px 40px 0px 40px"; 
+  document.getElementById( "bre_left" ).style.padding = "0px 0px 0px 40px"; 
+  document.getElementById( "arrowLeft" ).style.display = "none";
+  document.getElementById( "arrowRight" ).style.display = "block";  
+ }else{
+  obj.style.display = "";
+  document.getElementById( "aaa" ).style.margin = "30px 40px 0px 239px"; 
+  document.getElementById( "bre_left" ).style.padding = "0px 0px 0px 239px"; 
+  document.getElementById( "arrowLeft" ).style.display = "block";
+  document.getElementById( "arrowRight" ).style.display = "none";  
+ }
+}
+</script>
+</head>
+<body>
+
+<table height="100%" style="width:211px; position:absolute;" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+            <td id="divc" width="200">
+                <ul class="ce">
+                <li class="mt51"><a href="#" class="fb"><img src="images/ico/menu1.png" class="mr10" />基础信息</a></li>
+                <li>
+                    <a href="#" class="fb" ><img src="images/ico/menu2.png" class="mr10" />计划信息</a>
+                    <ul class="er">
+                        <li><a  href="#">保养计划管理</a></li>
+                        <li><a  href="#">保养实绩</a></li>
+                        <li><a  href="#">大修计划管理</a></li>
+                        <li><a  href="#">大修计划历史列表</a></li>
+                        <li><a  href="#">巡检计划管理</a></li>
+                        <li><a  href="#">巡检实绩</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="fb" ><img src="images/ico/menu3.png" class="mr10" />维修信息</a></li>
+                <li><a href="#" class="fb" ><img src="images/ico/menu4.png" class="mr10" />报表信息</a></li>
+                <li><a href="#" class="fb" ><img src="images/ico/menu5.png" class="mr10" />提案书信息</a></li>
+               </ul>
+            </td>
+            <td width="11px"><img id="arrowLeft" src="images/left.png" onclick="TestBlack('divc');" /><img id="arrowRight" style="display:none;" src="images/right.png" onclick="TestBlack('divc');"  /></td>
+          </tr>
+</table>
+
+</body>
+</html>

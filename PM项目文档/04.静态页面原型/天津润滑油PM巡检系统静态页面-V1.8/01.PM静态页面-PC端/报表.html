@@ -1,0 +1,755 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PM巡检系统管理</title>
+<meta name="Copyright" content="Douco Design." />
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+</head>
+<body>
+<div id="dcWrap"> <div id="dcHead">
+ <div id="head">
+  <div class="logo"></div>
+  <div class="nav">
+   <ul class="navRight">
+    <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+     <div class="drop mUser">
+      <a href="#">修改密码</a>
+         <a href="#">个人信息修改</a>
+     </div>
+    </li>
+    <li class="noRight"><a href="#">退出</a></li>
+   </ul>
+  </div>
+ </div>
+</div>
+<!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
+        <ul class="top">
+            <li><a href="主页.html"><i class="home"></i><em>管理首页</em></a></li>
+        </ul>
+        <ul>
+            <li><a href="用户列表.html"><i class="page"></i><em>用户信息管理</em></a></li>
+            <li><a href="设备类型.html"><i class="page"></i><em>设备类型管理</em></a></li>
+            <li><a href="设备列表.html"><i class="page"></i><em>设备管理</em></a></li>
+            <li><a href="检查项目列表.html"><i class="page"></i><em>检查项目管理</em></a></li>
+        </ul>
+        <ul>
+            <li><a href="保养计划列表.html"><i class="productCat"></i><em>保养计划管理</em></a></li>
+            <li><a href="保养计划历史列表.html"><i class="productCat"></i><em>保养计划历史列表</em></a></li>
+            <li><a href="项目管理列表.html"><i class="productCat"></i><em>项目管理列表</em></a></li>
+            <li><a href="项目管理历史列表.html"><i class="productCat"></i><em>项目管理历史列表</em></a></li>
+            <li><a href="巡检计划列表.html"><i class="productCat"></i><em>巡检计划管理</em></a></li>
+            <li><a href="巡检计划历史列表.html"><i class="productCat"></i><em>巡检计划历史列表</em></a></li>
+            <li><a href="安全检查管理.html"><i class="productCat"></i><em>安全检查管理</em></a></li>
+        </ul>
+        <ul>
+            <li><a href="维修计划列表.html"><i class="articleCat"></i><em>维修单管理</em></a></li>
+            <li><a href="维修日志列表.html"><i class="articleCat"></i><em>维修日志管理</em></a></li>
+        </ul>
+        <ul class="boxTitle">
+            <li><a href="维修故障类型汇总.html"><i class="articleCat"></i><em>维修故障统计</em></a></li>
+            <li><a href="员工业绩详情.html"><i class="articleCat"></i><em>员工业绩统计</em></a></li>
+            <li><a href="结算详情.html"><i class="articleCat"></i><em>结算</em></a></li>
+            <li class="cur"><a href="报表.html"><i class="article"></i><em>报表</em></a></li>
+        </ul>
+        <ul class="bot">
+            <li ><a href="提案书管理.html"><i class="article"></i><em>提案书管理</em></a></li>
+        </ul>
+    </div></div>
+ <div id="dcMain"> <!-- 当前位置 -->
+<div id="urHere">PM巡检系统管理</div>  <div id="index" class="mainBox" style="padding-top:18px;height:auto!important;height:550px;min-height:550px;">
+         <div class="filter">
+             <form action="#" method="post">
+                 设备类别 <select name="cat_id">
+                 <option value="0">未分类</option>
+                 <option value="1">电议</option>
+                 <option value="4">机械</option>
+             </select>
+                 设备类型 <select name="cat_id">
+                 <option value="0">未分类</option>
+                 <option value="1">灌装线</option>
+                 <option value="4">球阀</option>
+             </select>
+
+                计划创建时间：<input name="keyword" type="text" class="inpMain" value="2016-02-26" size="20" />~<input name="keyword" type="text" class="inpMain" value="2016-03-26" size="20" />
+                 <input name="submit" class="btnGray" type="submit" value="筛选" />
+                 PM完成率：<input name="keyword" type="text" class="inpMain" value="不可编辑" size="20" />
+
+
+             </form>
+         </div>
+         <div id="list" style="height:500px;width:1198px;overflow:scroll;">
+         <table width="100%"  border="0" cellpadding="8" cellspacing="0"  class="tableBasic">
+             <tr>灌装机设备检查维护20160227~20160304</tr>
+             <tr>
+
+                 <td align="left" colspan="5">
+                     <table width="1000px" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+
+                         <tr>
+                             <th>类别</th>
+                             <th>设备类型</th>
+                             <th>设备名称</th>
+                             <th>罐体阀门检查</th>
+                             <th>罐体盘梯检查</th>
+                             <th>各路管线检查</th>
+                             <th>罐体外观检查</th>
+                             <th>处理时间</th>
+                         </tr>
+                         <tr >
+                             <td align="center">预防性维护</td>
+                             <td align="center">灌装线</td>
+                             <td align="center">LB-T141</td>
+                             <td align="center">
+                                 正常
+                             </td>
+                             <td align="center">
+                                 未确认 原因是不能停机
+                             </td>
+                             <td align="center">
+                                 未确认 原因是不能停机
+                             </td>
+                             <td align="center">
+                                 正常
+                             </td>
+                             <td align="center">
+                                 2016-09-11 12:00
+                             </td>
+                         </tr>
+                         <tr >
+                             <td align="center">预防性维护</td>
+                             <td align="center">灌装线</td>
+                             <td align="center">LB-T142</td>
+                             <td align="center">
+                                 正常
+                             </td>
+                             <td align="center">
+                                 未确认 原因是不能停机
+                             </td>
+                             <td align="center">
+                                 未确认 原因是不能停机
+                             </td>
+                             <td align="center">
+                                 正常
+                             </td>
+                             <td align="center">
+                                 2016-09-11 12:00
+                             </td>
+                         </tr>
+                         <tr >
+                             <td align="center">预防性维护</td>
+                             <td align="center">灌装线</td>
+                             <td align="center">LB-T143</td>
+
+                             <td align="center">
+                                 正常
+                             </td>
+                             <td align="center">
+                                 未确认 原因是不能停机
+                             </td>
+                             <td align="center">
+                                 未确认 原因是不能停机
+                             </td>
+                             <td align="center">
+                                 正常
+                             </td>
+                             <td align="center">
+                                 2016-09-11 12:00
+                             </td>
+                         </tr>
+                         <tr >
+                             <td align="center">预防性维护</td>
+                             <td align="center">灌装线</td>
+                             <td align="center">LB-T144</td>
+
+                             <td align="center">
+                                 正常
+                             </td>
+                             <td align="center">
+                                 未确认 原因是不能停机
+                             </td>
+                             <td align="center">
+                                 未确认 原因是不能停机
+                             </td>
+                             <td align="center">
+                                 正常
+                             </td>
+                             <td align="center">
+                                 2016-09-11 12:00
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center">预见性维护</td>
+                             <td align="center"></td>
+                             <td align="center">
+                                 检查振动值
+                             </td>
+                             <td align="center">
+                                 正常
+                             </td>
+                             <td align="center"></td>
+                             <td align="center">
+
+                             </td>
+                             <td align="center">
+
+                             </td>
+                             <td align="center">
+                                 2016-09-13 12:35:56
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center">预见性维护</td>
+                             <td align="center"></td>
+                             <td align="center">
+                                 检查流动值
+                             </td>
+                             <td align="center">
+                                 正常
+                             </td>
+                             <td align="center"></td>
+                             <td align="center">
+
+                             </td>
+                             <td align="center">
+
+                             </td>
+                             <td align="center">
+                                 2016-09-13 12:35:56
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center">大修项目</td>
+                             <td align="center">灌装线</td>
+                             <td align="center">LB-T141</td>
+                             <td align="center">
+                                 正常
+                             </td>
+                             <td align="center">
+
+                             </td>
+                             <td align="center">
+
+                             </td>
+                             <td align="center">
+
+                             </td>
+                             <td align="center">
+                                 2016-09-13 12:35:56
+                             </td>
+                         </tr>
+                     </table>
+                 </td>
+
+             </tr>
+         </table>
+</br>
+             <table width="100%"  border="0" cellpadding="8" cellspacing="0"  class="tableBasic">
+                 <tr>旋盖机设备检查维护20160226~20160326</tr>
+                 <tr>
+
+                     <td align="center" colspan="5">
+                         <table width="1500px" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+
+                             <tr>
+                                 <th>类别</th>
+                                 <th>设备类型</th>
+                                 <th>设备名称</th>
+                                 <th>PLC控制系统工作正常</th>
+                                 <th>显示正常、控制系统无报警</th>
+                                 <th>线缆、管线连接完好无破损</th>
+                                 <th>各执行机构检查、动作正常</th>
+                                 <th>空气过滤器正常、压力正常4.5bar</th>
+                                 <th>产品外观正常、无泄漏</th>
+                                 <th>处理时间/th>
+                             </tr>
+                             <tr >
+                                 <td align="center">预防性维护</td>
+                                 <td align="center">球阀</td>
+                                 <td align="center">3~6升旋盖机</td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     2016-09-11 12:00
+                                 </td>
+                             </tr>
+
+                             <tr >
+                                 <td align="center">预防性维护</td>
+                                 <td align="center">球阀</td>
+                                 <td align="center">1升旋盖机</td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     2016-09-11 12:00
+                                 </td>
+                             </tr>
+
+                             <tr >
+                                 <td align="center">预防性维护</td>
+                                 <td align="center">球阀</td>
+                                 <td align="center">4升旋盖机</td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     2016-09-11 12:00
+                                 </td>
+                             </tr>
+
+                             <tr >
+                                 <td align="center">预防性维护</td>
+                                 <td align="center">球阀</td>
+                                 <td align="center">简4升旋盖机</td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     2016-09-11 12:00
+                                 </td>
+                             </tr>
+
+                             <tr >
+                                 <td align="center">预防性维护</td>
+                                 <td align="center">球阀</td>
+                                 <td align="center">百川升旋盖机</td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     2016-09-11 12:00
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td align="center">预见性维护</td>
+                                 <td align="center"></td>
+                                 <td align="center">
+                                     检查振动值
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+                                     2016-09-13 12:35:56
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td align="center">预见性维护</td>
+                                 <td align="center"></td>
+                                 <td align="center">
+                                     检查流动值
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+                                     2016-09-13 12:35:56
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td align="center">大修项目</td>
+                                 <td align="center">球阀</td>
+                                 <td align="center">LB-T141</td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center">
+                                     2016-09-13 12:35:56
+                                 </td>
+                             </tr>
+                         </table>
+                     </td>
+
+                 </tr>
+             </table>
+             </br>
+             <table width="100%"  border="0" cellpadding="8" cellspacing="0"  class="tableBasic">
+                 <tr>灌装线喷码机检查维护20160228~20160229</tr>
+                 <tr>
+
+                     <td align="left" colspan="5">
+                         <table width="950px" border="0" cellpadding="8" cellspacing="0" class="tableBasic" >
+
+                             <tr>
+                                 <th>类别</th>
+                                 <th>设备类型</th>
+                                 <th>设备名称</th>
+                                 <th>喷头清洁、正常</th>
+                                 <th>显示正常、控制系统无报警</th>
+                                 <th>电柜密封、紧固完好</th>
+                                 <th>处理时间</th>
+                             </tr>
+                             <tr >
+                                 <td align="center"  width="150px">预防性维护</td>
+                                 <td align="center"  width="150px">灌装机</td>
+                                 <td align="center" width="150px">3~6升灌装线喷码机</td>
+
+                                 <td align="center" width="200px">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center" width="150px">
+                                     正常
+                                 </td>
+                                 <td align="center" width="150px">
+                                     2016-09-11 12:00
+                                 </td>
+                             </tr>
+                             <tr >
+                                 <td align="center">预防性维护</td>
+                                 <td align="center"  width="150px">灌装机</td>
+                                 <td align="center">4升灌装线喷码机</td>
+
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     2016-09-11 12:00
+                                 </td>
+                             </tr>
+                             <tr >
+                                 <td align="center">预防性维护</td>
+                                 <td align="center"  width="150px">灌装机</td>
+                                 <td align="center">18灌装线喷码机</td>
+
+                                 <td align="center">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     2016-09-11 12:00
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td align="center">预见性维护</td>
+                                 <td align="center"  width="150px"></td>
+                                 <td align="center">
+                                     检查振动值
+                                 </td>
+
+                                 <td align="center" width="150px">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center" >
+
+                                 </td>
+                                 <td align="center">
+                                     2016-09-13 12:35:56
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td align="center">预见性维护</td>
+                                 <td align="center"  width="150px"></td>
+                                 <td align="center">
+                                     检查流动值
+                                 </td>
+
+                                 <td align="center" width="150px">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+                                 <td align="center" width="150px">
+
+                                 </td>
+                                 <td align="center">
+                                     2016-09-13 12:35:56
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td align="center">大修项目</td>
+                                 <td align="center"  width="150px">灌装机</td>
+                                 <td align="center">LB-T141</td>
+
+                                 <td align="center">
+                                       正常
+                                 </td>
+                                 <td align="center" width="150px">
+
+                                 </td>
+
+                                 <td align="center" width="150px">
+
+                                 </td>
+                                 <td align="center">
+                                     2016-09-13 12:35:56
+                                 </td>
+                             </tr>
+                         </table>
+                     </td>
+
+                 </tr>
+             </table>
+             </br>
+             <table width="100%"  border="0" cellpadding="8" cellspacing="0"  class="tableBasic">
+                 <tr>皮带秤封口机巡检20160302~20160309</tr></tr>
+                 <tr>
+
+                     <td align="left" colspan="5">
+                         <table width="1000px" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+
+                             <tr>
+                                 <th>类别</th>
+                                 <th>设备类型</th>
+                                 <th>设备名称</th>
+                                 <th>显示正常、控制系统无报警</th>
+                                 <th>电气盘柜密封、紧固完好</th>
+                                 <th>处理时间</th>
+                             </tr>
+                             <tr >
+                                 <td align="center"width="150px" >预防性维护</td>
+                                 <td align="center"width="180px" >皮带秤</td>
+                                 <td align="center" width="200px">3~6升皮带秤封口机</td>
+                                 <td align="center" width="230px">
+                                     正常
+                                 </td>
+
+                                 <td align="center" width="250px">
+                                     正常
+                                 </td>
+                                 <td align="center" width="200px">
+                                     2016-09-11 12:00
+                                 </td>
+                             </tr>
+                             <tr >
+                                 <td align="center" >预防性维护</td>
+                                 <td align="center"width="150px" >皮带秤</td>
+                                 <td align="center">1升皮带秤封口机</td>
+                                 <td align="center">
+                                     正常
+                                 </td>
+
+                                 <td align="center">
+                                     正常
+                                 </td>
+                                 <td align="center">
+                                     2016-09-11 12:00
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td align="center">预见性维护</td>
+                                 <td align="center"width="150px" ></td>
+                                 <td align="center">
+                                     检查振动值
+                                 </td>
+
+                                 <td align="center" width="150px">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+
+                                 <td align="center">
+                                     2016-09-13 12:35:56
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td align="center">预见性维护</td>
+                                 <td align="center"width="150px" ></td>
+                                 <td align="center">
+                                     检查流动值
+                                 </td>
+
+                                 <td align="center" width="150px">
+                                     未确认 原因是不能停机
+                                 </td>
+                                 <td align="center">
+
+                                 </td>
+
+                                 <td align="center">
+                                     2016-09-13 12:35:56
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td align="center">大修项目</td>
+                                 <td align="center"width="150px" >皮带秤</td>
+                                 <td align="center">LB-T141</td>
+
+                                 <td align="center">
+                                     正常
+                                 </td>
+
+
+                                 <td align="center" width="150px">
+
+                                 </td>
+                                 <td align="center">
+                                     2016-09-13 12:35:56
+                                 </td>
+                             </tr>
+                         </table>
+                     </td>
+
+                 </tr>
+
+  </table>
+
+  </div>
+ </div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+<script src="http://www.mycodes.net/js/tongji.js"></script>
+
+
+</body>
+</html>

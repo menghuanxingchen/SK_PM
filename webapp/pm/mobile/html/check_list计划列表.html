@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>检查设备列表</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--下拉
+<script src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/special.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {	
+	pop("chefenlei","chefenleiDiv");  //第一个pop
+	pop("chexing","chexingDiv"); //第2个pop
+	pop("chepinpai","chepinpaiDiv"); //第2个pop
+	pop("lingbujianfenlei","lingbujianfenleiDiv"); //第2个pop
+});
+
+</script>-->
+<!-- 弹出层 js-->
+<script type="text/javascript">
+function Show_Hidden(popid){
+	
+    if(popid.style.display=="block"){
+        popid.style.display='none';
+        $(".pop_bg").hide();
+		//pop_bg.style.display='none';
+		pop_close.style.display='none';
+		body.style.overflow = "auto";
+		
+    }else{
+        popid.style.display='block';
+        $('#'+popid+'').addClass('pop_bg');
+        $(".pop_bg").css("display", "block");  
+		//pop_bg.style.display='block';
+		pop_close.style.display='block';
+		body.style.overflow = "hidden";
+		
+    }
+}
+
+</script>
+
+
+</head>
+
+<body>
+<div id="com_body">
+    <div id="_centent">
+        <header>
+            <div class="rt-bk">
+                <i class="bk"></i>
+            </div>
+            <div class="top-name"><p>检查设备列表</p></div>
+        </header>
+    
+    <section class="mt-1"> 
+        <div class="ps-lt">
+            <div class="lt-dsb">
+                <p class="title">名称</p><p>灌装线设备检查维护（1次/周）</p>
+            </div>
+            <div class="lt-dsb">
+                <p class="title">日期区间</p><p>2016-10-09~2016-10-10</p>
+            </div>
+            <div class="lt-dsb cl-bb">
+				<!--区域-->
+                <div class="pop_bg" id="pop1"  style="display: none;">
+                	<a onclick="Show_Hidden(pop1)"><div class="pop_close"></div></a>
+                	<div class="pop_wrap">
+                        <ul>
+                            <li><a>V308区域</a></li>
+                            <li><a>灌装线</a></li>
+                            <li><a>调配车间室内及屋檐</a></li>
+                            <li><a>控制室</a></li>
+                            <li><a>调配罐区室外及附属</a></li>
+                            <li><a>办公楼</a></li>
+                            <li><a>成品仓库</a></li>
+                            <li><a>空压机房</a></li>
+                            <li><a>卧灌及附属</a></li>
+                            <li><a>消防泵房隔油池及附属</a></li>
+                            <li><span>不确定及其他</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--设备类型-->
+                <div class="pop_bg" id="pop2"  style="display: none;">
+                	<a onclick="Show_Hidden(pop2)"><div class="pop_close"></div></a>
+                	<div class="pop_wrap">
+                        <ul>
+                            <li><a>V308区域</a></li>
+                            <li><a>灌装线</a></li>
+                            <li><a>调配车间室内及屋檐</a></li>
+                            <li><a>控制室</a></li>
+                            <li><a>调配罐区室外及附属</a></li>
+                            <li><a>办公楼</a></li>
+                            <li><a>成品仓库</a></li>
+                            <li><a>空压机房</a></li>
+                            <li><a>卧灌及附属</a></li>
+                            <li><a>消防泵房隔油池及附属</a></li>
+                            <li><span>不确定及其他</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            <a class="area" onclick="Show_Hidden(pop1)" >区域</a><a class="equipment" onclick="Show_Hidden(pop2)" >设备类型</a>
+            
+            
+        </div>
+    </section>
+    
+    <section class="mt-2"> 
+        <div class="ps-lt">
+            	<table class="list_table">
+                	<thead>
+                        <tr>
+                            <th class="w500">设备名</th>
+                            <th class="w200">目标</th>
+                            <th class="w200">实际</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="w500">灌装机1L</td>
+                            <td class="w200">100%</td>
+                            <td class="w200 green">100%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="list_table">
+                	<thead>
+                        <tr>
+                            <th class="w500">设备名</th>
+                            <th class="w200">目标</th>
+                            <th class="w200">实际</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="w500">灌装机3~6</td>
+                            <td class="w200">100%</td>
+                            <td class="w200 orange">50%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="list_table">
+                	<thead>
+                        <tr>
+                            <th class="w500">设备名</th>
+                            <th class="w200">目标</th>
+                            <th class="w200">实际</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="w500">灌装机4L</td>
+                            <td class="w200">100%</td>
+                            <td class="w200 orange">80%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="list_table">
+                	<thead>
+                        <tr>
+                            <th class="w500">设备名</th>
+                            <th class="w200">目标</th>
+                            <th class="w200">实际</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="w500">灌装机4L</td>
+                            <td class="w200">100%</td>
+                            <td class="w200 orange">80%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="list_table last">
+                	<thead>
+                        <tr>
+                            <th class="w500">设备名</th>
+                            <th class="w200">目标</th>
+                            <th class="w200">实际</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="w500">灌装机18L</td>
+                            <td class="w200">100%</td>
+                            <td class="w200 orange">60%</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+    </section>
+ 
+
+</div> 
+
+    <script>
+        (function (doc, win) {
+          var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+              var clientWidth = docEl.clientWidth;
+              oSize = 100 * (clientWidth / 720);
+              
+              if (!clientWidth) return;
+              if (oSize > 75) {
+                oSize = 75; // 限制rem值 1080(最大宽度) / 7.2（设计宽度） =100
+				var com_body = document.getElementById('com_body');  
+          		com_body.style.width="7.2rem";
+				com_body.style.margin="0 auto";
+               }
+              docEl.style.fontSize = oSize + 'px';
+              
+            };
+    
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+
+
+</body>
+</html>

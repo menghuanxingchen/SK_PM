@@ -1,0 +1,210 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PM巡检系统管理</title>
+<meta name="Copyright" content="Douco Design." />
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+</head>
+<body>
+<div id="dcWrap"> <div id="dcHead">
+ <div id="head">
+  <div class="logo"></div>
+  <div class="nav">
+   <ul class="navRight">
+    <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+     <div class="drop mUser">
+      <a href="#">修改密码</a>
+         <a href="#">个人信息修改</a>
+     </div>
+    </li>
+    <li class="noRight"><a href="#">退出</a></li>
+   </ul>
+  </div>
+ </div>
+</div>
+<!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
+        <ul class="top">
+            <li><a href="主页.html"><i class="home"></i><em>管理首页</em></a></li>
+        </ul>
+        <ul>
+            <li><a href="用户列表.html"><i class="page"></i><em>用户信息管理</em></a></li>
+            <li><a href="设备类型.html"><i class="page"></i><em>设备类型管理</em></a></li>
+            <li><a href="设备列表.html"><i class="page"></i><em>设备管理</em></a></li>
+            <li class="cur"><a href="检查项目列表.html"><i class="page"></i><em>检查项目管理</em></a></li>
+        </ul>
+        <ul>
+            <li><a href="保养计划列表.html"><i class="productCat"></i><em>保养计划管理</em></a></li>
+            <li><a href="保养计划历史列表.html"><i class="productCat"></i><em>保养计划历史列表</em></a></li>
+            <li><a href="项目管理列表.html"><i class="productCat"></i><em>项目管理列表</em></a></li>
+            <li><a href="项目管理历史列表.html"><i class="productCat"></i><em>项目管理历史列表</em></a></li>
+            <li><a href="巡检计划列表.html"><i class="productCat"></i><em>巡检计划管理</em></a></li>
+            <li><a href="巡检计划历史列表.html"><i class="productCat"></i><em>巡检计划历史列表</em></a></li>
+            <li><a href="安全检查管理.html"><i class="productCat"></i><em>安全检查管理</em></a></li>
+        </ul>
+        <ul>
+            <li><a href="维修计划列表.html"><i class="articleCat"></i><em>维修单管理</em></a></li>
+            <li><a href="维修日志列表.html"><i class="articleCat"></i><em>维修日志管理</em></a></li>
+        </ul>
+        <ul class="boxTitle">
+            <li><a href="维修故障类型汇总.html"><i class="articleCat"></i><em>维修故障统计</em></a></li>
+            <li><a href="员工业绩详情.html"><i class="articleCat"></i><em>员工业绩统计</em></a></li>
+            <li><a href="结算详情.html"><i class="articleCat"></i><em>结算</em></a></li>
+            <li><a href="报表.html"><i class="article"></i><em>报表</em></a></li>
+        </ul>
+        <ul class="bot">
+            <li ><a href="提案书管理.html"><i class="article"></i><em>提案书管理</em></a></li>
+        </ul>
+    </div></div>
+<div id="dcMain">
+<!-- 当前位置 -->
+<div id="urHere">基础数据<b>></b><strong>检查项目列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+<h3><a href="检查项目新增.html?rec=add" class="actionBtn add">检查项目新增</a>检查项目列表</h3>
+<div class="filter">
+    <form action="#" method="post">
+            设备类别 <select name="cat_id">
+                <option value="0">未分类</option>
+                <option value="1">电仪</option>
+                <option value="4">机械</option>
+            </select>
+        设备类型 <select name="cat_id">
+        <option value="0">未分类</option>
+        <option value="1">齿轮泵</option>
+    </select>
+        检查项目 <input name="keyword" type="text" class="inpMain" value="" size="20" />
+        <input name="submit" class="btnGray" type="submit" value="筛选" />
+    </form>
+</div>
+<div id="list">
+    <form name="action" method="post" action="#">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+            <tr>
+                <th width="40" align="center">序号</th>
+                <th width="150" align="center">设备类别</th>
+                <th width="150" align="center">设备类型</th>
+                <th width="80" align="center">检查项目名称</th>
+                <th width="80" align="center">显示类型</th>
+                <th width="80" align="center">操作</th>
+            </tr>
+            <tr>
+                <td align="center">1</td>
+                <td align="center">电议</td>
+                <td align="center"><a href="#">齿轮泵</a></td>
+                <td><a href="#">电机和泵头螺栓是否紧固</a></td>
+                <td align="center">正常/异常</td>
+                <td align="center">
+                    <a href="检查项目新增.html">编辑</a> | <a href="#">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">2</td>
+                <td align="center">电议</td>
+                <td align="center"><a href="#">齿轮泵</a></td>
+                <td><a href="#">电机和泵头螺栓是否紧固</a></td>
+                <td align="center">正常/异常</td>
+                <td align="center">
+                    <a href="检查项目新增.html">编辑</a> | <a href="#">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">3</td>
+                <td align="center">机械</td>
+                <td align="center"><a href="#">齿轮泵</a></td>
+                <td><a href="#">电机和泵头螺栓是否紧固</a></td>
+                <td align="center">正常/异常</td>
+                <td align="center">
+                    <a href="检查项目新增.html">编辑</a> | <a href="#">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">4</td>
+                <td align="center">机械</td>
+                <td align="center"><a href="#">齿轮泵</a></td>
+                <td><a href="#">电机和泵头螺栓是否紧固</a></td>
+                <td align="center">正常/异常</td>
+                <td align="center">
+                    <a href="检查项目新增.html">编辑</a> | <a href="#">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">5</td>
+                <td align="center">机械</td>
+                <td align="center"><a href="#">齿轮泵</a></td>
+                <td><a href="#">电机和泵头螺栓是否紧固</a></td>
+                <td align="center">正常/异常</td>
+                <td align="center">
+                    <a href="检查项目新增.html">编辑</a> | <a href="#">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">6</td>
+                <td align="center">机械</td>
+                <td align="center"><a href="#">齿轮泵</a></td>
+                <td><a href="#">电机和泵头螺栓是否紧固</a></td>
+                <td align="center">正常/异常</td>
+                <td align="center">
+                    <a href="检查项目新增.html">编辑</a> | <a href="#">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">7</td>
+                <td align="center">机械</td>
+                <td align="center"><a href="#">齿轮泵</a></td>
+                <td><a href="#">电机和泵头螺栓是否紧固</a></td>
+                <td align="center">正常/异常</td>
+                <td align="center">
+                    <a href="检查项目新增.html">编辑</a> | <a href="#">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">8</td>
+                <td align="center">机械</td>
+                <td align="center"><a href="#">齿轮泵</a></td>
+                <td><a href="#">电机和泵头螺栓是否紧固</a></td>
+                <td align="center">正常/异常</td>
+                <td align="center">
+                    <a href="检查项目新增.html">编辑</a> | <a href="#">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">9</td>
+                <td align="center">机械</td>
+                <td align="center"><a href="#">齿轮泵</a></td>
+                <td><a href="#">电机和泵头螺栓是否紧固</a></td>
+                <td align="center">正常/异常</td>
+                <td align="center">
+                    <a href="检查项目新增.html">编辑</a> | <a href="#">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">10</td>
+                <td align="center">机械</td>
+                <td align="center"><a href="#">齿轮泵</a></td>
+                <td><a href="#">电机和泵头螺栓是否紧固</a></td>
+                <td align="center">正常/异常</td>
+                <td align="center">
+                    <a href="检查项目新增.html">编辑</a> | <a href="#">删除</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="clear"></div>
+<div class="pager">总计 15 个记录，共 1 页，当前第 1 页 | <a href="#">第一页</a> 上一页 下一页 <a href="#">最末页</a></div>               </div>
+</div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+<script src="http://www.mycodes.net/js/tongji.js"></script>
+</body>
+</html>

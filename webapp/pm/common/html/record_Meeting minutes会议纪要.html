@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>录入 - 项目管理 - 会议纪要</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<!--left-menu-->
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<!--menu展开关闭-->
+<script language="javascript">
+function TestBlack(TagName){
+ var obj = document.getElementById(TagName);
+ if(obj.style.display==""){
+  obj.style.display = "none"; 
+  document.getElementById( "aaa" ).style.margin = "30px 40px 0px 40px"; 
+  document.getElementById( "bre_left" ).style.padding = "0px 0px 0px 40px"; 
+  document.getElementById( "arrowLeft" ).style.display = "none";
+  document.getElementById( "arrowRight" ).style.display = "block";  
+ }else{
+  obj.style.display = "";
+  document.getElementById( "aaa" ).style.margin = "30px 40px 0px 239px"; 
+  document.getElementById( "bre_left" ).style.padding = "0px 0px 0px 239px"; 
+  document.getElementById( "arrowLeft" ).style.display = "block";
+  document.getElementById( "arrowRight" ).style.display = "none";  
+ }
+}
+</script>
+
+</head>
+<body>
+
+	<div class="header">
+    	<div class="fl mt10 ml23"><img src="images/logo.png" class="mr10 mb3" /><span class="f15">PM系统</span></div>
+        <div class="fr mr95 mt22">
+        	<a href="" class="write"><img src="images/ico/person.png" class="mr10 mb3" />欢迎，韩智慧</a>
+            <a href="" class="write"><img src="images/ico/logout.png" class="ml10 mr10 mb3" />退出</a>
+        </div>
+    </div>
+    <!--left menu-->
+    <!--<iframe class="left_menu"  frameborder=0   border=0 src="left_menu.html" mce_src="left_menu.html"></iframe> -->
+    <table height="100%" style="width:211px; position:absolute;" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+            <td id="divc" width="200">
+                <ul class="ce">
+                <li class="mt51"><a href="#" class="fb"><img src="images/ico/menu1.png" class="mr10" />基础信息</a></li>
+                <li>
+                    <a href="#" class="fb" ><img src="images/ico/menu2.png" class="mr10" />计划信息</a>
+                    <ul class="er">
+                        <li><a  href="#">保养计划管理</a></li>
+                        <li><a  href="#">保养实绩</a></li>
+                        <li><a  href="#">大修计划管理</a></li>
+                        <li><a  href="#">大修计划历史列表</a></li>
+                        <li><a  href="#">巡检计划管理</a></li>
+                        <li><a  href="#">巡检实绩</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="fb" ><img src="images/ico/menu3.png" class="mr10" />维修信息</a></li>
+                <li><a href="#" class="fb" ><img src="images/ico/menu4.png" class="mr10" />报表信息</a></li>
+                <li><a href="#" class="fb" ><img src="images/ico/menu5.png" class="mr10" />提案书信息</a></li>
+               </ul>
+            </td>
+            
+            <td width="11px"><img id="arrowLeft" src="images/left.png" onclick="TestBlack('divc');" /><img id="arrowRight" style="display:none;" src="images/right.png" onclick="TestBlack('divc');"  /></td>
+          </tr>
+    </table>
+
+    <div class="contents">
+          <div class="main_wrap" >
+          		<!--breadcrumbs-->
+            	<div class="crumbs" id="bre_left"><img src="images/ico/position.png" class="mr10" /><a href="">项目管理</a>&nbsp;>&nbsp;会议纪要</div>
+            
+            	<!--右侧 开始--> 
+            	<div class="main" id="aaa">
+                
+                		<div class="title mb18">会议纪要</div>
+                        
+                        <!--查询条件-->
+                          <table class="w_auto" border="0" cellspacing="0" cellpadding="0">
+                          	<tr>
+                            	<td><span class="f14">请选择要上传的文件</span>&nbsp;&nbsp;<input type="text" value="" class="w400" onclick="value='';focus()" /></td> 
+                                <td><a href="#" class="btn1 f14 fb ml10 mr10">浏览 ...</a><a href="#" class="btn1 f14 fb">上传</a></td>
+                            </tr>
+                            <tr class="h10"></tr>
+                            <tr style="display:none;">
+                            	<td align="center" class="gray">您还未上传任何文件...</td>
+                                <td></td>
+                            </tr>
+                          </table>
+                          <table class="tt mt18 mb30" border="0" cellspacing="0" cellpadding="0">
+                          	<tr>
+                            	<th width="50px">序号</th>
+                                <th width="85%">文件名称</th>
+                                <th>下载</th>
+
+                            </tr>
+                            <tr class="eve">
+                            	<td>1</td>
+                                <td></td>
+                                <td><a href="" class="down">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+                            </tr>
+                            <tr class="odd">
+                            	<td>2</td>
+                                <td></td>
+                                <td><a href="" class="down">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+                            </tr>
+                            <tr class="eve">
+                            	<td>3</td>
+                                <td></td>
+                                <td><a href="" class="down">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+                            </tr>
+                        </table>
+                        <table>
+                        	<tr>
+                            	<td width="100px" align="center">备注</td>
+                                <td><textarea rows="8" class="w99"></textarea></td>
+                            </tr>
+                        </table>
+  						
+                        <div class="tex_c mt22 mb30"><a href="#" class="btn1 f14 fb mr10">保存</a><a href="#" class="btn1 f14 fb">返回</a></div>
+                        <!-- 右侧 结束-->
+    
+        		</div>
+          </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+@import url(reset.css);
+
+html{}
+body{}
+#pop{min-width:600px !important; overflow-x:hidden;}
+a{ color:#3a7de3;}
+a:hover{ color:#7db0fe;}
+/************************闁稿繐宕幃鎾诲冄1�7瀹勬壆纭ￄ1�7��7锟�1锟�7S****************************/
+.re{ position:relative;}
+.fb{ font-weight:bold;}
+.tex_c{ text-align:center;}
+.tex_l{ text-align:left;}
+
+.lh31{ line-height:31px;}
+
+.f13{ font-size:13px;}
+.f14{ font-size:14px;}
+.f15{ font-size:15px;}
+.f16{ font-size:16px;}
+.f20{ font-size:20px;}
+
+.mt10{ margin-top:10px;}
+.mt22{ margin-top:22px;}
+.mt30{ margin-top:30px;}
+.mt18{ margin-top:18px;}
+.mt51{ margin-top:51px;}
+
+.mb3{ margin-bottom:3px;}
+.mb10{ margin-bottom:10px !important;}
+.mb18{ margin-bottom:18px;}
+.mb30{ margin-bottom:30px !important;}
+
+.ml5{ margin-left:5px;}
+.ml12{ margin-left:-12px !important;}
+.ml10{ margin-left:10px !important;}
+.ml23{ margin-left:23px !important;}
+.ml30{ margin-left:30px !important;}
+
+.mr5{ margin-right:5px;}
+.mr10{ margin-right:10px !important;}
+.mr20{ margin-right:20px !important;}
+.mr2{ margin-right:2%;}
+.mr3{ margin-right:3%;}
+
+
+.w_auto{ width:auto;}
+.w40{ width:40px !important;}/*by fish  */
+.w47{ width:47px !important;}
+.w60{ width:60px !important;}
+.w70{ width:70px !important;}
+.w80{ width:80px !important;}
+.w110{ width:110px !important;}
+.w120{ width:120px !important;}
+.w130{ width:130px !important;} /*by fish  */
+.w140{ width:140px !important;}
+.w150{ width:150px !important;}
+.w180{ width:180px !important;}/*璁惧绠＄悊鍖哄煙锟ￄ1�7*/
+.w198{ width:198px !important;}
+.w210{ width:210px !important;}
+.w220{ width:220px !important;}
+.w330{ width:330px !important;}
+.w400{ width:400px;}
+.w8{ width:8%;}
+.w10{ width:10% !important;}
+.w16{  width:16% !important;}
+.w30{ width:30%;}
+.w67{ width:67%;}
+.w99{ width:99% !important;}
+.w100{ width:100%;}
+.w100p{ width:100px !important;}
+
+.h10{ height:10px;}
+
+
+.red{ color:#e71f19;}
+.gray{ color:#5a5a5a;}
+.wb-n{white-space:normal !important;}
+/************************闁稿繐宕幃鎾诲冄1�7瀹勬壆纭ￄ1�7��7锟�1锟�7E****************************/
+
+/*濠㈣埖鎸抽崕锟�*/
+.header{ width:100%; height:51px; background:#3679df;  color:#fff; position:fixed; z-index:100;}
+.header span{ border-left:1px solid #73a2ea; vertical-align:bottom; padding-left:10px;}
+
+
+/* 鐎归潻缂氶弲鍓侊拷浣冨閸╋拄1�7 */
+.left_menu{width:166px; position:fixed; bottom:0; top:51px;}
+
+.ce{display:block;font-size:14px; width:154px; height:100%; min-height:100%; background:#fff; border-right:#d0d2d6 1px solid; position:absolute; top:0; left:0;}
+.ce li{border-bottom: 1px solid #dedede;}
+.more{margin-left: 36px;}
+.ce li a{line-height: 46px;text-indent:25px;color:#292a2c; background:#f4f8ff;display:block;cursor:pointer;}
+.ce li .dqian{background:none}
+.ce li .xz{width:154px;}
+
+.er{ font-size:14px;display:none;width:154px;background:#fff; border-top:1px solid #dedede; padding-top:5px; padding-bottom:5px;}
+.er li{width:100%;border:0px;}
+.er li a{display:block;line-height: 30px;text-indent:60px;color:#6f7074;background:none;}
+.er .e_li a{color:#27c2ce;}
+.er li a:hover,.er li .sen_x{color:#3a7de3;}
+.er li .sen_x{ background:url(../images/ico/disc.png) no-repeat 28px 13px;}
+
+.contents { padding-top:51px;}
+.contents .main_wrap{ margin-left: -190px;  float: right;  width: 100%;}  
+.contents .main{ margin:25px 35px 0 190px;}
+
+.contents .main_wrap .crumbs{ height:38px; line-height:38px; background:#f4f5f7; padding-left:190px; font-size:12px; color:#97979c;}
+
+/*title闁告粌鏈悡锛勬嫚閵忋�1�7�鍔ラ柛鎺炴嫄1�7*/
+.title{ width:100%; border-bottom:1px solid #e5e9f2; color:#0f0f0f; font-size:19px; height:46px; line-height:46px;}
+
+
+/*闁圭顦甸幐鎶藉冄1�7瀹勬壆锟ￄ1�7*/
+a.write{ color:#fff;}
+
+a.btn{}
+
+#login .btn1{width:322px;line-height:43px; height:43px;}
+a.over{ color:#a7a7a7 !important; border-bottom:0;}
+a.btn1{ background:#639bef; border:1px solid #639bef; color:#fefefe; width:69px; height:31px; line-height:31px; border-radius:3px; text-align:center; display:inline-block;}
+a.btn1:hover{ background:none; border:1px solid #639bef; color:#639bef;}
+
+a.btn2{ background:#93969b; padding:4px 1px 8px 0px; border-radius:3px;}
+a.btn2:hover{ background:#b4b9c2;}
+a.btn2 img{margin:8px;}
+
+a.btn3{ color:#407edc; border-bottom:1px solid #407edc;}
+
+a.down{ background:url(../images/ico/download.png) no-repeat;}
+a.down:hover{ background:url(../images/ico/download_on.png) no-repeat;}
+
+#arrowLeft:hover{ cursor:pointer;}
+#arrowRight:hover{ cursor:pointer;}
+/*閻炴稏鍔嶉悧锟�1锟�7锟�1锟�7鐎殿噯鎷峰┑顕嗘嫄1�7*/
+table a{ color:#7d7d7d;}
+
+.table_wrap{ width:100%;margin-bottom:30px;}
+
+.tt1 tr:hover{background:#fbeadf !important; color:#111111 !important;}
+.tt{background:#FFF;border-collapse:collapse;text-align: center; width:100%;color:#111111;}/**white-space:nowrap; del by liuyang**/
+.tt td{ height:34px; vertical-align:middle; line-height:34px;border-bottom:1px solid #dfe1e3; padding:0px 8px 0px 8px; border:1px solid #dfe1e3;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+.tt th{height:36px; vertical-align:middle; line-height:36px; padding:0px 8px 0px 8px; text-align:center;font-weight:bold;  background:#e8eff7; border-right:1px solid #dfe1e3;}
+
+.t_r_content,#table_height{width:100%; max-height:351px; background:#fff; overflow:auto;} 
+.t_r{width:100%; height:auto; float:left;}
+     
+.t_r thead{width:100%;} 
+.t_r tbody tr{width:100%;}
+.t_r_title{border:1px solid #dfe1e3; border-bottom:0px;}
+.eve{ background:#fff;}
+.odd{ background:#f3f7fe;}
+
+.record_table input{width:100%;margin:5px 0 5px 0;}
+.record_table select{width:100%;margin:5px 0 5px 0;}
+.record_table textarea{width:100%; height:100px; margin:5px 0 5px 0;}
+/*  闁告帒妫濋妴锟�1锟�7锟�1锟�7鐎殿噯鎷峰┑顕嗘嫄1�7 */
+.paging{float:right; width:100%;/* margin-top:30px;*/margin-bottom:25px; }
+.paging .page{ color:#111111; padding:4px 13px 4px 13px;}
+.paging a{ border:1px solid #d3dee6;  padding:4px 10px 4px 10px; float:left;cursor:pointer; color:#111111;}
+
+.paging a.on{ color:#fff; background:#639bef; border:1px solid #d3dee6;}
+
+.or{ color:#ff5a00;}
+/*  闁告帒妫濋妴锟�1锟�7锟�1锟�7缂備焦鎸诲锟�1锟�7锟�1锟�7*/
+/*************************************鐟滅増娲栭崣鍡樸亜閸偆澹夛拄1�7��1锟�7锟筋噯鎷ￄ1�7��7锟�1锟�7**************************************************/
+/*  濞ｅ洦绻傞崥鍥╂媼閳ュ啿鐏婇柡鍌涙緲椤わ拄1�7 鐎殿噯鎷峰┑顕嗘嫄1�7 */
+.new_info{ background:#fbfcfe; }/**/
+.new_info_list{max-height:400px; overflow-y:auto;}
+.h_bg{ background:#e8eff7 !important;}
+.new_info li{ line-height:40px; padding-left:20px; padding-right:20px;}
+.new_info .li_on1:hover{ background:url(../images/ico/delete.png) no-repeat 95% 15px;}
+.new_info .li_on2:hover{ background:url(../images/ico/delete.png) no-repeat 98% 15px;}
+/*  濞ｅ洦绻傞崥鍥╂媼閳ュ啿鐏婇柡鍌涙緲椤わ拄1�7 缂備焦鎸诲锟�1锟�7锟�1锟�7*/
+.title_l{ width:100%; color:#111111; font-size:16px; height:23px; line-height:43px;}
+
+/***popup***/
+.pop_box{width:1000px;}
+.popup{ margin:20px 30px 20px 20px;}
+
+/**login S
+.h_center{width:100% !important;position:absolute !important;top:25% !important;}
+#login {width: 437px;border-radius:10px; margin:0 auto;background-color:#fff;}
+
+#login h1 {height:49px;background: #4080e1;	border-bottom:3px solid #0186ef; border-radius:10px 10px 0 0;color: #fff;font-size: 28px;padding:10px 0 0 20px;}
+#login span{border-left:1px solid #73a2ea; vertical-align:bottom; padding-left:10px;}
+
+#login .forms{padding:35px 59px !important;}
+#login input{background-image:none;border:1px solid #dfe1e3;background-color:#fff;border-radius:2px;font-size:13px;line-height:2em;color:#c3c3c3;margin: 0;padding: 0;margin-bottom:20px;}	
+#login input[type="text"], #login div input[type="password"] {width: 322px;height:41px;line-height:34px;text-indent:10px;}
+#login label{display:inline-block;width:40px;text-align:center;}
+login E**/
+
+/**report S**/
+.t_report th{text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width:300px;}
+.t_report td{max-width:300px;}

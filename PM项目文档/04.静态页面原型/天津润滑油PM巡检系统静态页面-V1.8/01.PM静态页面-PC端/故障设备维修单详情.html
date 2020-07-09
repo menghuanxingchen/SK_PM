@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>PM巡检系统管理 </title>
+<meta name="Copyright" content="Douco Design." />
+<link href="css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/jquery.autotextarea.js"></script>
+</head>
+<body>
+<div id="dcWrap">
+ <div id="dcHead">
+     <div id="head">
+         <div class="logo"></div>
+         <div class="nav">
+             <ul class="navRight">
+                 <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
+                     <div class="drop mUser">
+                         <a href="#">修改密码</a>
+                         <a href="#">个人信息修改</a>
+                     </div>
+                 </li>
+                 <li class="noRight"><a href="#">退出</a></li>
+             </ul>
+         </div>
+     </div>
+</div>
+<!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
+    <ul class="top">
+        <li><a href="主页.html"><i class="home"></i><em>管理首页</em></a></li>
+    </ul>
+    <ul>
+        <li><a href="用户列表.html"><i class="page"></i><em>用户信息管理</em></a></li>
+        <li><a href="设备类型.html"><i class="page"></i><em>设备类型管理</em></a></li>
+        <li><a href="设备列表.html"><i class="page"></i><em>设备管理</em></a></li>
+        <li><a href="检查项目列表.html"><i class="page"></i><em>检查项目管理</em></a></li>
+    </ul>
+    <ul>
+        <li><a href="保养计划列表.html"><i class="productCat"></i><em>保养计划管理</em></a></li>
+        <li><a href="保养计划历史列表.html"><i class="productCat"></i><em>保养计划历史列表</em></a></li>
+        <li><a href="项目管理列表.html"><i class="productCat"></i><em>项目管理列表</em></a></li>
+        <li><a href="项目管理历史列表.html"><i class="productCat"></i><em>项目管理历史列表</em></a></li>
+        <li><a href="巡检计划列表.html"><i class="productCat"></i><em>巡检计划管理</em></a></li>
+        <li><a href="巡检计划历史列表.html"><i class="productCat"></i><em>巡检计划历史列表</em></a></li>
+        <li><a href="安全检查管理.html"><i class="productCat"></i><em>安全检查管理</em></a></li>
+    </ul>
+    <ul>
+        <li><a href="维修计划列表.html"><i class="articleCat"></i><em>维修单管理</em></a></li>
+        <li><a href="维修日志列表.html"><i class="articleCat"></i><em>维修日志管理</em></a></li>
+    </ul>
+    <ul class="boxTitle">
+        <li><a href="维修故障类型汇总.html"><i class="articleCat"></i><em>维修故障统计</em></a></li>
+        <li><a href="员工业绩详情.html"><i class="articleCat"></i><em>员工业绩统计</em></a></li>
+        <li><a href="结算详情.html"><i class="articleCat"></i><em>结算</em></a></li>
+        <li><a href="报表.html"><i class="article"></i><em>报表</em></a></li>
+    </ul>
+    <ul class="bot">
+        <li ><a href="提案书管理.html"><i class="article"></i><em>提案书管理</em></a></li>
+    </ul>
+</div></div>
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere">数据汇总<b>></b><strong>故障设备维修单详情</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+<h3><a href="维修计划管理.html?rec=add" ></a>故障设备维修单详情</h3>
+     <div class="filter">
+         <form action="#" method="post">
+             时间：<input name="keyword" type="text" class="inpMain" value="2016-02-26" size="20" />~<input name="keyword" type="text" class="inpMain" value="2016-03-26" size="20" />
+
+         </form>
+     </div>
+
+        <div id="list">
+    <form name="action" method="post" action="#">
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+     <tr>
+
+      <th width="40" align="center">序号</th>
+         <th width="150" align="center">申请编号</th>
+         <th width="150" align="center">申请日期</th>
+         <th width="150" align="center">指派人</th>
+         <th width="150" align="center">维修内容</th>
+         <th width="150" align="center">申请人</th>
+         <th width="150" align="center">申请人部门</th>
+         <th width="150" align="center">维修担当</th>
+         <th width="150" align="center">维修工时</th>
+         <th width="150" align="center">维修金额</th>
+         <th width="150" align="center">详情</th>
+     </tr>
+          <tr>
+
+      <td align="center">1</td>
+      <td  align="center"><a href="#">20160901001</a></td>
+      <td align="center">2013-06-26</td>
+      <td align="center">张三</td>
+      <td align="center">漏油</td>
+      <td align="center">张三</td>
+      <td align="center">电议</td>
+      <td align="center">张三</td>
+      <td align="center">2H</td>
+      <td align="center">100</td>
+              <td align="center">
+                  <a href="维修计划管理.html">详情</a>
+              </td>
+     </tr>
+        <tr>
+
+            <td align="center">2</td>
+            <td  align="center"><a href="#">20160901002</a></td>
+            <td align="center">2013-06-26</td>
+            <td align="center">张三</td>
+            <td align="center">漏油</td>
+            <td align="center">张三</td>
+            <td align="center">电议</td>
+            <td align="center">张三</td>
+            <td align="center">2H</td>
+            <td align="center">100</td>
+            <td align="center">
+                <a href="维修计划管理.html">详情</a>
+            </td>
+        </tr>
+        <tr>
+
+            <td align="center">3</td>
+            <td  align="center"><a href="#">20160901003</a></td>
+            <td align="center">2013-06-26</td>
+            <td align="center">张三</td>
+            <td align="center">漏油</td>
+            <td align="center">张三</td>
+            <td align="center">电议</td>
+            <td align="center">张三</td>
+            <td align="center">5H</td>
+            <td align="center"></td>
+            <td align="center">
+                <a href="维修计划管理.html">详情</a>
+            </td>
+        </tr>
+        <tr>
+
+            <td align="center">4</td>
+            <td  align="center"><a href="#">20160901004</a></td>
+            <td align="center">2013-06-26</td>
+            <td align="center">张三</td>
+            <td align="center">漏油</td>
+            <td align="center">张三</td>
+            <td align="center">电议</td>
+            <td align="center">张三</td>
+            <td align="center">1H</td>
+            <td align="center"></td>
+            <td align="center">
+                <a href="维修计划管理.html">详情</a>
+            </td>
+        </tr>
+         </table>
+
+
+    </form>
+    </div>
+    <div class="clear"></div>
+
+ </div>
+ <div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+ <script type="text/javascript">
+ 
+ onload = function()
+ {
+   document.forms['action'].reset();
+ }
+
+ function douAction()
+ {
+     var frm = document.forms['action'];
+
+     frm.elements['new_cat_id'].style.display = frm.elements['action'].value == 'category_move' ? '' : 'none';
+ }
+ 
+ </script>
+</body>
+</html>
