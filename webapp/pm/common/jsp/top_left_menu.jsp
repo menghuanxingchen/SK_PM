@@ -255,6 +255,13 @@ function changePwd(){
                     	<li><a  href="<%=request.getContextPath()%>/MovingOutController/defaultJsp.do" id="menuF12"><span class="ml12">搬出证申请</span></a></li>                  	
                     </ul>
                 </li>
+                <li id="basMenu15">
+                	<a href="#" id="menuG" class="fb" ><img src="<%=request.getContextPath()%>/pm/common/images/ico/menu3.png" class="mr10" />备品备件管理</a>
+                    <ul class="er">
+                    	<li><a  href="<%=request.getContextPath()%>/MovingListController/defaultJsp.do" id="menuG10"><span class="ml12">采购申请</span></a></li>   
+                                  	
+                    </ul>
+                </li>
                </ul>
             </td>
             <td width="11px"><img id="arrowLeft" src="<%=request.getContextPath()%>/pm/common/images/left.png" onclick="TestBlack('divc');" /><img id="arrowRight" style="display:none;" src="<%=request.getContextPath()%>/pm/common/images/right.png" onclick="TestBlack('divc');"  /></td>
