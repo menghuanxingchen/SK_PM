@@ -1,0 +1,6 @@
+/application.properties
+/cache/
+/com/
+/log4j.properties
+/spring/
+/webmvc/
