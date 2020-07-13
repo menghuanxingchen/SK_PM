@@ -89,7 +89,7 @@
 		
 		<property name="jdbcUrl">
 		      <!-- <value>jdbc:mysql://10.120.251.202:3306/pm?useUnicode=true&amp;characterEncoding=utf-8</value> -->
-				 <value>jdbc:mysql://114.113.147.116:3036/pm?useUnicode=true&amp;characterEncoding=utf-8</value> 
+				 <value>jdbc:mysql://114.113.147.110:3306/pm_test?useUnicode=true&amp;characterEncoding=utf-8</value> 
 		</property>
 
 		<property name="user">
