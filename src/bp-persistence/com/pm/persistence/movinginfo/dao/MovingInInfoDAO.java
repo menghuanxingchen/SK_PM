@@ -88,10 +88,10 @@ public class MovingInInfoDAO extends BaseDao {
 				+ "case when b.cnt > 0 then 'N' else moutYN end moutYN,minGoalType,minGoalContent,skContactsNo ,'' as skApplyName,a.create_id "
 				+ "FROM moving_in_info a "
 				+ "LEFT JOIN (select moutNo,count(*) cnt from moving_out_info  GROUP BY moutNo)b on REPLACE(a.minNo,'R','') = REPLACE(b.moutNo,'C','') "
-				+" where a.minTime<='"+entity.getMovingEddate()+"' and a.minTime>= '"+entity.getMovingStdate()+"'"
+				+" where a.minTime<=date_add('"+entity.getMovingEddate()+"',interval 1 day)  and a.minTime>= '"+entity.getMovingStdate()+"'"
 				+ "union all select id,'搬出证' as movingType,moutNo,deal_user_id,approval_state,moutName,moutCompany,moutCarno,moutPhone,moutTime, "
 				+ "'N' moutYN,moutGoalType,moutGoalContent,'' as skContactsNo,skApplyName,create_id from moving_out_info "
-				+ " where moutTime<='"+entity.getMovingEddate()+"' and moutTime>= '"+entity.getMovingStdate()+"' ) t "
+				+ " where moutTime<=date_add('"+entity.getMovingEddate()+"',interval 1 day) and moutTime>= '"+entity.getMovingStdate()+"' ) t "
 				+ "LEFT JOIN sys_user_info S ON t.deal_user_id = s.user_num "
 				+ " left join(select COUNT(approve_id) cntApprove,proposal_num from  \r\n" + 
 				"          proposal_approve_info where approve_yn='Y' group by  proposal_num )P on t.minNo = p.proposal_num  "
